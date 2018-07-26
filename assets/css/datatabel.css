@@ -1,0 +1,23 @@
+.table_index tbody tr:first-child {
+    background: white !important;
+}
+table_index,
+.col-sm-6 {
+    background: #e6e7e8;
+    color: #808282;
+}
+.broker_filter input {
+    width: 200px !important;
+}
+div.dataTables_length {
+    padding-left: 30px;
+}
+tfoot td {
+    border-bottom: solid 2px #B82029 !important;
+    height: 0px !important;
+}
+.dataTables_length .input-sm {
+    background-color: #808282;
+    color: white;
+    margin-left: 30px;
+}

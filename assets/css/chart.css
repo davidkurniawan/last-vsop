@@ -1,0 +1,514 @@
+.btn-filterchart{
+	
+}
+.green{
+    color:#38b449 !important;
+}
+ 
+.red {
+    color:#b81f28 !important;
+}
+
+.orange{
+     color:#fbaf3f !important;
+}
+.chartwrap {
+    /* padding:0 2em 2em 2em; */
+	padding: 15px 35px;
+    background-color:#f3f3f4;
+    
+}
+#charts{
+    margin-bottom:100px;
+}
+#charts.stockinfo .chartwrap{ 
+    background:transparent;
+}
+#charts .col-md-3{
+		height:auto !important;
+}
+.chartwrap .action{
+    /*margin-top:15px;*/
+    padding:0px 15px;
+    /* margin-bottom:15px; */
+}
+.chartwrap .chartmenu{
+    margin-bottom:0;
+}
+.chartwrap .chartmenu > li{
+    display:inline-block;
+}
+
+.chartwrap .chartmenu > li > a{
+    display:block;
+    padding-right:15px;
+    color:#373737;
+}
+
+
+
+
+#chart-menu-wrap{
+    background-color:#FFF;
+    padding:10px;
+}
+
+.filter-chart > *{
+    display:inline-block;
+}
+.chartwrap .broker_filter select{
+    width:280px;
+}
+
+.chartmenu li.hassub{
+    position:relative;
+}
+
+.chartmenu li.hassub div.submenu{
+       position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    top: 25px;
+    z-index: 999999;
+    height:100%;
+    display:none;
+}
+
+#charts.stockinfo .chartwrap{
+    padding:0;
+}
+#charts.stockinfo .chartwrap .chartTitle{
+    background-color:#e6e7e8;   
+    padding: 10px;
+}
+#charts.stockinfo .chartwrap .chartTitle h3{
+    margin-bottom:0;
+    margin-top:0;   
+    font-size:1.5em;
+}
+
+#charts .head-panel{
+	
+	height:40px;
+	background-color:#E6E7E8;
+	overflow:hidden;
+}
+#charts .head-panel > *{
+
+		float:left;
+		display:block;
+		margin-right:10px;
+}
+#charts .head-panel > .stockname{
+	
+	background-color:#e6e7e8;
+}
+
+#charts .head-panel > * > *{
+	height:40px;
+	line-height:40px;
+	
+}
+
+#charts .head-panel > .stockname > a.homechart{
+		text-decoration:none;
+		color:#474747;
+	
+}
+
+#charts .head-panel > .stockname > label > input{
+
+    background-color:transparent;
+    border:none;
+    max-width:100px;
+    padding:10px;
+    border-radius:0;
+    -webkit-border-radius:0;
+}
+#charts .head-panel > .stockname{
+	display:table;
+	background-color:#e6e7e8;
+      width:35%;
+}
+
+#charts .head-panel > * > *{
+	height:40px;
+	line-height:40px;
+	
+}
+
+#charts .head-panel > .stockname > a.homechart{
+		text-decoration:none;
+		/* color:#fff; */
+        display: table-cell;
+        vertical-align: top;
+      
+}
+#charts .head-panel > .stockname > label {
+	/* background-color: #b8202a; */
+    /* color:#fff; */
+	background-repeat: no-repeat;
+	background-position: right top;
+	display: table-cell;
+	padding: 0px;
+	padding-right: 0px;
+	color: #FFF;
+	background-image: url("../../images/table-index-bg.png");
+	padding-right: 40px;
+	margin-bottom: 0;
+}
+#charts .head-panel > .stockname > a {
+	background-repeat: no-repeat;
+		background-position: right top;
+		display:table-cell;
+		padding: 0px;
+		color: #FFF;
+		/* background-image: url("../../images/table-index-bg.png"); */
+		padding-right: 40px;
+        margin-bottom:0;
+}
+#charts .head-panel > .stockname > span{
+	background-repeat: no-repeat;
+		background-position: right top;
+		display: inline-block;
+		padding: 0px 10px;
+		color: #FFF;
+		background-image: url("../../images/table-index-bg.png");
+		padding-right: 40px;
+}
+#charts .head-panel > .panel-menu{
+		
+	list-style:none;
+	
+}
+#charts ul.panel-menu > li{
+	
+	float:left;
+	display:block;
+	padding-right:5px;
+}
+
+#charts ul.panel-menu > li > a{
+	display:block;
+	background-color:#6c6d70;
+	padding:0px 10px;
+	text-decoration:none;
+	color:#FFF;
+}
+
+ul.panel-menu li:nth-child(1) a{
+    background-image: url("../../images/table-index.png");
+    background-position:top left;
+    padding-left:45px !important;
+    background-color:transparent !important;
+    margin-left:-42px;
+}
+ul.panel-menu li:nth-child(1) a.active{
+    background-image: url("../../images/table-index-bg1-active.png");
+}
+ul.panel-menu.stocksectoral{
+
+   
+
+}
+ul.panel-menu.stocksectoral li:first-child a{
+ background-image: url("../../images/table-index-aktif.png");
+    background-position:top right;
+    padding-right:35px !important;
+    background-color:transparent !important;
+}
+ul.panel-menu.stocksectoral li:first-child a.active{
+    background-image: url("../../images/table-index-bg-active.png");
+}
+ul.panel-menu.stocksectoral li:nth-child(2) a{
+    background-image: url("../../images/table-index-bg1.png");
+    background-position:top left;
+    padding-left:45px !important;
+    background-color:transparent !important;
+    margin-left:-42px;
+}
+
+ul.panel-menu.stocksectoral li:nth-child(2) a.active{
+    background-image: url("../../images/table-index-bg1-active.png");
+}
+#charts .bookmark {
+	float:right;
+}
+#charts ul.panel-menu > li > a:hover, #charts ul.panel-menu > li > a.active,
+#charts .bookmark > a:hover
+{
+		
+	background-color:#b81f28;
+	
+}
+#charts .head-panel > .stockname > a.homechart:hover{
+	color:#000;
+}
+#charts .bookmark > a{
+		
+		/* display:block;c */
+		font-size:12px;
+		border-radius: 3px;
+		background-color: #6c6d70;
+		line-height:auto;
+		color:#FFF;
+		padding:3px 5px;
+		text-decoration:none;
+}
+/*.table-board-wrap{
+	display:table;
+	width:100%;
+}
+.table-board-wrap > *{
+
+	padding-left:10px;
+	padding-top:0px;
+	display:table-cell;
+	float:none;
+	width:calc(100%/3);
+	
+}*/
+
+.table-board-wrap table tr td{
+    padding:5px !important;
+    
+}
+
+.table-board-wrap h4{
+	/* white-space: nowrap; */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+}
+
+.table-board-wrap table th{
+	
+	font-size:14px;
+	text-align:center;
+
+}
+
+.panel{
+	display:none;
+}
+.panel.active{
+	
+	display:block;
+		
+}
+div.submenu ul{
+   
+    border:1px solid #ebebeb;
+	
+	
+}
+.chartmenu li.hassub  ul > li{
+    background-color:#FFF;
+
+}
+
+.chartmenu li.hassub  ul > li > a{
+    display:block;
+    padding:5px 10px;
+    font-size:14px;
+    color:#000;
+}	
+
+.chartmenu li.hassub:hover div.submenu{
+    display:block;
+}
+
+
+/* STOCK INFO */
+.widget-chart{
+    background-color:#e6e7e8;
+    margin-bottom:15px;
+    padding: 20px 10px;
+    border-radius:5px;
+}
+.widget-chart th {
+    text-align: center;
+    background: #e6e7e8;
+    font-weight: bold;
+    color: #737477;
+
+}
+
+.widget-chart.tbl{
+    background:transparent;
+    padding: 0 20px;
+    text-align: center
+}
+
+.widget-chart.tbl table{
+
+    font-size:14px;
+}
+.stockinfo-wrap{
+    padding-top:20px;
+	overflow:hidden;
+}
+ .stockinfo-wrap >div:first-child{
+	padding-left:0;
+ }
+
+ .stockinfo-wrap >div:last-child{
+	padding-right:0;
+ }
+.widget-chart > .head, .widget-chart > .widget-content {
+    display:table;
+    width:100%;
+}
+
+.widget-chart > .head > * {
+    display:table-cell;
+}
+
+.widget-chart > .widget-content .big-num{
+    font-size:28px;
+    font-weight:500;
+}
+.widget-chart > .widget-content > .trow{
+    display:table-row;
+}
+.widget-chart > .widget-content > .trow > span{
+    display:table-cell;
+}
+#charts .table_index{
+    width:100%;
+    margin-top:0;
+}
+
+.widget-chart .progress{
+    height:5px;
+    margin-bottom:0;
+    background-color:#1b89c2;
+}
+
+.widget-chart .progress-bar-success{
+    background-color:#b81f28;
+}
+
+.rangeinfo{
+    padding:10px;
+    border:1px solid #bbbdc0;
+    margin-bottom:20px;
+	overflow: auto;
+}
+
+.rangeinfo .progress{
+    height:10px;
+    background-color:#1b89c2;
+}
+
+.rangeinfo .progress-bar-success{
+    background-color:#b81f28;
+}
+.rangeinfo .progressIndicator{
+    position:relative;
+    width:100%;
+    display: block;
+}
+
+.rangeinfo .progressIndicator > *{
+    position:absolute;
+    left:0;
+    font-size:12px;
+    top:-20px;
+    
+    min-width:90px;
+}
+table.tbl-horizontal {
+    margin-bottom:0px;
+	font-size:14px;
+}
+table.tbl-horizontal td{
+		padding:5px;
+}
+.tbl-horizontal td:first-child{
+    background-color:#e6e7e8;
+    width:30%;
+}
+.table_index .table-right tr  {
+    font-size:11px;
+}
+.table_index .table-right tr th{
+    border: none;
+    font-size: 11pt;
+    padding: 2px !important;
+    background-color:#b8202a;
+}
+
+.table_index .table-right tr:nth-child(even){
+    background-color: #e6e7e8;
+}
+
+.chart-container{
+
+    position:relative;
+    min-height:300px;
+    overflow:hidden;
+}
+
+.chart-container div.loader-chart
+{
+    position:absolute;
+    background-color:rgba(255,255,255,0.5);
+    width:100%;
+    left:0;
+    top:0;
+    height:100%;
+    text-align:center;
+    z-index:888;
+}
+
+
+.chart-container div.loader-chart i{
+
+    position:absolute;
+    top:40%;
+    color:#b81f28;
+
+}
+
+.table_mini_stock{
+    padding: 50px
+}
+.table_mini_stock th{
+    height: 50px;
+    background: white;
+}
+
+.col {
+    padding: 10px 5px;
+}
+.col3 td {
+    height: 40px;
+} 
+.col2 td {
+    height: 80px;
+} 
+.col1 td {
+    height: 80px;
+}
+
+.filter-chart a:hover {
+    text-decoration: none;
+}
+.btn-account-load {
+    width: 70px !important;
+background: #B82029 !important;
+padding-left: 5px !important;
+padding-right: 5px !important;
+padding-top: 1px;
+padding-bottom: 2px;
+border-radius: 30px;
+box-shadow: none;
+outline: none;
+color: #fff;
+border: none;
+font-size: 17pt;
+margin-left: 10px;
+font-weight: 300;
+
+}

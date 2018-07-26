@@ -1,0 +1,576 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>Victoria Securities</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/page.css" />
+		<link rel="stylesheet" href="assets/css/theme.css" />
+		<link rel="stylesheet" href="assets/css/responsive.css" />
+		<link rel="stylesheet" href="assets/css/table_sort.css" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script type="text/javascript" src="assets/js/datetimepicker/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/datetimepicker/moment.min.js"></script>
+		<script type="text/javascript" src="assets/js/datetimepicker/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/js/datetimepicker/daterangepicker.css" />
+  <script type="text/javascript" src="assets/js/jquery.tablesorter.min.js"></script>
+	</head>
+
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<div id="header">
+
+				<!-- Logo -->
+				<img src="images/VS.png" class="logo" id="logo">
+
+				<div class="logout-area">
+				LOGOUT
+				<a href="#"><img src="images/logoutbtn.png" class="logout-icon"></a>
+				</div>
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li class="current"><a href="#">ACCOUNT</a>
+              <ul>
+                <li><a href="AccountInfo.html">Account Info</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="OrderList.html">Order List</a></li>
+                <li><a href="TransactionList.html">Transaction List</a></li>
+                <li><a href="HistoricalTransactionList.html">Historical Transaction List</a></li>
+                <li><a href="FinancialHistory.html">Financial History</a></li>
+                <li><a href="PasswordAndPin.html">Change Password</a></li>
+
+              </ul>
+            </li>
+						<li><a href="#">QUOTE</a>
+						<ul>
+                <li><a href="RunningQuote.html">Running Quote</a></li>
+                <li><a href="#">Stock Quote</a></li>
+                <li><a href="HistoricalPrice.html">Historical Price</a></li>
+                <li><a href="WatchList.html">Watch List</a></li>
+
+              </ul>
+              </li>
+						<li><a href="#">RANKING</a>
+						<ul>
+                <li><a href="StockTracking.html">Stock Tracking</a></li>
+                <li><a href="BrokerRangking.html">Broker Rangking</a></li>
+                <li><a href="BrokerActivity.html">Broker Activity</a></li>
+                <li><a href="ForeignActivity.html">Foreign Activity</a></li>
+
+              </ul>
+              </li>
+						<li><a href="#">CHART</a></li>
+						<li><a href="Research.html">NEWS</a>
+							<ul>
+									<li><a href="Research.html">Research</a></li>
+							</ul>
+						</li>
+            <li><a href="Tournament.html">TOURNAMENT</a></li>
+					</ul>
+				</nav>
+
+			</div>
+
+			<!-- Banner -->
+			<section class="content">
+      <div class="breadcrumb">
+        <span class="right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span><a href="#">Quote</a><span class="right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span><a href="#">Watch List</a>
+      </div>
+
+			</section>
+			<section class="account-nav">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 account_load">
+						<form action="#">
+							<label class="account-menu-label">Account</label>
+							<select name="_account" class="account-menu" id="_account"  onchange="objAccount.loadSales();">
+								<option value="#" selected>U06</option>
+							</select>
+							<button class="btn-account-load" id="_enter" name="_enter" onclick="objAccount.loadSales();">Load</button>
+						</form>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 acc-info">
+						<div class="account-info">
+							<div class="account-avatar">
+								<img src="images/user-icon.png" class="logout-icon">
+							</div>
+							<div class="account-name">
+								<h4 class="account-id"  id="_oAccountName" name="_oAccountName">U06-Umar widodo Tiono (R)</h4>
+								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 no-padding">
+									<h4 class="account-sales">Sales/Dealer : </h4>
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 no-padding">
+									<h4 class="account-sales" id="_oAccountSales" name="_oAccountSales">Bambang 021 7278 2310</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+<div class="clearfix"></div>
+
+<section class="table_index">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-head">
+        <div class="watch_list_head">
+            <form action="">
+                <div class="col-md-7">
+                    <label for="filter" class="Watchlist-title">Stock List</label>
+                </div>
+                <div class="col-md-5">
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form_wl">
+						<input type="text" name="stock_name" value="" / class="stock_name" placeholder="Stock Name">
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form_wl">
+						<input type="submit" value="Add Stock" class="add_stock_btn">
+					</div>
+						<!-- <a href="#" class="refresh_btn"><img src="images/refresh-arrow.png"></a> -->
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 stock_radio_filter">
+        <form action="">
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 radio_wl">
+				<input name="_sort" id="_sort0" value="0" type="radio" class="radio_watchlist" onclick="loadData();">My Watchlist</input>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 radio_wl">
+				<input name="_sort" id="_sort2" value="2" type="radio" class="radio_watchlist" onclick="loadData();" checked>Most Active</input>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 radio_wl">
+				<input name="_sort" id="_sort4" value="4" type="radio" class="radio_watchlist" onclick="loadData();">Top Gainer</input>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 radio_wl">
+				 <input name="_sort" id="_sort6" value="6" type="radio" class="radio_watchlist" onclick="loadData();">Top Loser</input>
+			</div>
+        </form>
+    </div>
+    <div class="table-responsive" id="tab_wl">
+        <table id="keywords" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="header headerSortDown"><span>CODE</span></th>
+                    <th class="header headerSortDown"><span>SECTORAL</span></th>
+                    <th id="hilang" class="font-orange hilang"><span>PREV</span></th>
+                    <th class="header headerSortDown"><span>LAST</span></th>
+                    <th class="header headerSortDown"><span>CHG</span></th>
+                    <th class="header headerSortDown"><span>%CHG</span></th>
+                    <th class="header headerSortDown"><span>OPEN</span></th>
+                    <th class="header headerSortDown"><span>LOW</span></th>
+                    <th class="header headerSortDown"><span>%HIGH</span></th>
+                    <th id="hilang" class="header headerSortDown hilang"><span>Hit Offer %</span></th>
+                    <th id="hilang" class="header headerSortDown hilang"><span>AVG</span></th>
+                    <th class="header headerSortDown"><span>Val</span></th>
+                    <th class="header headerSortDown"><span>Vol(lot)</span></th>
+                    <th class="header headerSortDown"><span>BID(lot)</span></th>
+                    <th class="header headerSortDown"><span>BID</span></th>
+                    <th class="header headerSortDown"><span>OFFER</span></th>
+                    <th class="header headerSortDown"><span>OFFER(lot)</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+				<tr id="_qrow0">
+					<td id="_nomor_qrow0">1</td>
+					<td class="code" id="_stock_qrow0">&nbsp;</td>
+					<td class="font-orange hilang" id="_prev_qrow0">&nbsp;</td>
+					<td class="font-red" id="_last_qrow0">&nbsp;</td>
+					<td class="font-red" id="_chg_qrow0">&nbsp;</td>
+					<td class="font-red" id="_persenchg_qrow0">&nbsp;</td>
+					<td class="font-red" id="_open_qrow0">&nbsp;</td>
+					<td class="font-red-2" id="_low_qrow0">&nbsp;</td>
+					<td class="font-red" id="_high_qrow0">&nbsp;</td>
+					<td class="font-red hilang" id="_buypersen_qrow0">&nbsp;</td>
+					<td class="font-red hilang" id="_avg_qrow0">&nbsp;</td>
+					<td class="font-red-2" id="_val_qrow0">&nbsp;</td>
+					<td class="font-orange" id="_vol_qrow0">&nbsp;</td>
+					<td class="font-red" id="_bidVol_qrow0">&nbsp;</td>
+					<td class="font-red" id="_bidVal_qrow0">&nbsp;</td>
+					<td class="font-red" id="_offerVal_qrow0">&nbsp;</td>
+					<td class="font-red" id="_offerVol_qrow0">&nbsp;</td>
+					<td><span class="x-btn" onclick="removeActiveStock(0);">X</span></td>
+				</tr>
+				<tr id="_qrow1">
+					<td id="_nomor_qrow1">2</td>
+					<td class="code" id="_stock_qrow1">&nbsp;</td>
+					<td class="font-orange hilang" id="_prev_qrow1">&nbsp;</td>
+					<td class="font-red" id="_last_qrow1">&nbsp;</td>
+					<td class="font-red" id="_chg_qrow1">&nbsp;</td>
+					<td class="font-red" id="_persenchg_qrow1">&nbsp;</td>
+					<td class="font-red" id="_open_qrow1">&nbsp;</td>
+					<td class="font-red-2" id="_low_qrow1">&nbsp;</td>
+					<td class="font-red" id="_high_qrow1">&nbsp;</td>
+					<td class="font-red hilang" id="_buypersen_qrow1">&nbsp;</td>
+					<td class="font-red hilang" id="_avg_qrow1">&nbsp;</td>
+					<td class="font-red-2" id="_val_qrow1">&nbsp;</td>
+					<td class="font-orange" id="_vol_qrow1">&nbsp;</td>
+					<td class="font-red" id="_bidVol_qrow1">&nbsp;</td>
+					<td class="font-red" id="_bidVal_qrow1">&nbsp;</td>
+					<td class="font-red" id="_offerVal_qrow1">&nbsp;</td>
+					<td class="font-red" id="_offerVol_qrow1">&nbsp;</td>
+					<td><span class="x-btn" onclick="removeActiveStock(1);">X</span></td>
+				</tr>
+				<tr id="_qrow2">
+					<td id="_nomor_qrow2">3</td>
+					<td class="code" id="_stock_qrow2">&nbsp;</td>
+					<td class="font-orange hilang" id="_prev_qrow2">&nbsp;</td>
+					<td class="font-red" id="_last_qrow2">&nbsp;</td>
+					<td class="font-red" id="_chg_qrow2">&nbsp;</td>
+					<td class="font-red" id="_persenchg_qrow2">&nbsp;</td>
+					<td class="font-red" id="_open_qrow2">&nbsp;</td>
+					<td class="font-red-2" id="_low_qrow2">&nbsp;</td>
+					<td class="font-red" id="_high_qrow2">&nbsp;</td>
+					<td class="font-red hilang" id="_buypersen_qrow2">&nbsp;</td>
+					<td class="font-red hilang" id="_avg_qrow2">&nbsp;</td>
+					<td class="font-red-2" id="_val_qrow2">&nbsp;</td>
+					<td class="font-orange" id="_vol_qrow2">&nbsp;</td>
+					<td class="font-red" id="_bidVol_qrow2">&nbsp;</td>
+					<td class="font-red" id="_bidVal_qrow2">&nbsp;</td>
+					<td class="font-red" id="_offerVal_qrow2">&nbsp;</td>
+					<td class="font-red" id="_offerVol_qrow2">&nbsp;</td>
+					<td><span class="x-btn" onclick="removeActiveStock(2);">X</span></td>
+				</tr>
+				<tr id="_qrow3">
+					<td id="_nomor_qrow3">4</td>
+					<td class="code" id="_stock_qrow3">&nbsp;</td>
+					<td class="font-orange hilang" id="_prev_qrow3">&nbsp;</td>
+					<td class="font-red" id="_last_qrow3">&nbsp;</td>
+					<td class="font-red" id="_chg_qrow3">&nbsp;</td>
+					<td class="font-red" id="_persenchg_qrow3">&nbsp;</td>
+					<td class="font-red" id="_open_qrow3">&nbsp;</td>
+					<td class="font-red-2" id="_low_qrow3">&nbsp;</td>
+					<td class="font-red" id="_high_qrow3">&nbsp;</td>
+					<td class="font-red hilang" id="_buypersen_qrow3">&nbsp;</td>
+					<td class="font-red hilang" id="_avg_qrow3">&nbsp;</td>
+					<td class="font-red-2" id="_val_qrow3">&nbsp;</td>
+					<td class="font-orange" id="_vol_qrow3">&nbsp;</td>
+					<td class="font-red" id="_bidVol_qrow3">&nbsp;</td>
+					<td class="font-red" id="_bidVal_qrow3">&nbsp;</td>
+					<td class="font-red" id="_offerVal_qrow3">&nbsp;</td>
+					<td class="font-red" id="_offerVol_qrow3">&nbsp;</td>
+					<td><span class="x-btn" onclick="removeActiveStock(3);">X</span></td>
+				</tr>
+				<tr id="_qrow4">
+					<td id="_nomor_qrow4">5</td>
+					<td class="code" id="_stock_qrow4">&nbsp;</td>
+					<td class="font-orange hilang" id="_prev_qrow4">&nbsp;</td>
+					<td class="font-red" id="_last_qrow4">&nbsp;</td>
+					<td class="font-red" id="_chg_qrow4">&nbsp;</td>
+					<td class="font-red" id="_persenchg_qrow4">&nbsp;</td>
+					<td class="font-red" id="_open_qrow4">&nbsp;</td>
+					<td class="font-red-2" id="_low_qrow4">&nbsp;</td>
+					<td class="font-red" id="_high_qrow4">&nbsp;</td>
+					<td class="font-red hilang" id="_buypersen_qrow4">&nbsp;</td>
+					<td class="font-red hilang" id="_avg_qrow4">&nbsp;</td>
+					<td class="font-red-2" id="_val_qrow4">&nbsp;</td>
+					<td class="font-orange" id="_vol_qrow4">&nbsp;</td>
+					<td class="font-red" id="_bidVol_qrow4">&nbsp;</td>
+					<td class="font-red" id="_bidVal_qrow4">&nbsp;</td>
+					<td class="font-red" id="_offerVal_qrow4">&nbsp;</td>
+					<td class="font-red" id="_offerVol_qrow4">&nbsp;</td>
+					<td><span class="x-btn" onclick="removeActiveStock(4);">X</span></td>
+				</tr>
+				<tr id="_qrow5">
+					<td id="_nomor_qrow5">6</td>
+					<td class="code" id="_stock_qrow5">&nbsp;</td>
+					<td class="font-orange hilang" id="_prev_qrow5">&nbsp;</td>
+					<td class="font-red" id="_last_qrow5">&nbsp;</td>
+					<td class="font-red" id="_chg_qrow5">&nbsp;</td>
+					<td class="font-red" id="_persenchg_qrow5">&nbsp;</td>
+					<td class="font-red" id="_open_qrow5">&nbsp;</td>
+					<td class="font-red-2" id="_low_qrow5">&nbsp;</td>
+					<td class="font-red" id="_high_qrow5">&nbsp;</td>
+					<td class="font-red hilang" id="_buypersen_qrow5">&nbsp;</td>
+					<td class="font-red hilang" id="_avg_qrow5">&nbsp;</td>
+					<td class="font-red-2" id="_val_qrow5">&nbsp;</td>
+					<td class="font-orange" id="_vol_qrow5">&nbsp;</td>
+					<td class="font-red" id="_bidVol_qrow5">&nbsp;</td>
+					<td class="font-red" id="_bidVal_qrow5">&nbsp;</td>
+					<td class="font-red" id="_offerVal_qrow5">&nbsp;</td>
+					<td class="font-red" id="_offerVol_qrow5">&nbsp;</td>
+					<td><span class="x-btn" onclick="removeActiveStock(5);">X</span></td>
+				</tr>
+				<tr id="_qrow6">
+					<td id="_nomor_qrow6">7</td>
+					<td class="code" id="_stock_qrow6">&nbsp;</td>
+					<td class="font-orange hilang" id="_prev_qrow6">&nbsp;</td>
+					<td class="font-red" id="_last_qrow6">&nbsp;</td>
+					<td class="font-red" id="_chg_qrow6">&nbsp;</td>
+					<td class="font-red" id="_persenchg_qrow6">&nbsp;</td>
+					<td class="font-red" id="_open_qrow6">&nbsp;</td>
+					<td class="font-red-2" id="_low_qrow6">&nbsp;</td>
+					<td class="font-red" id="_high_qrow6">&nbsp;</td>
+					<td class="font-red hilang" id="_buypersen_qrow6">&nbsp;</td>
+					<td class="font-red hilang" id="_avg_qrow6">&nbsp;</td>
+					<td class="font-red-2" id="_val_qrow6">&nbsp;</td>
+					<td class="font-orange" id="_vol_qrow6">&nbsp;</td>
+					<td class="font-red" id="_bidVol_qrow6">&nbsp;</td>
+					<td class="font-red" id="_bidVal_qrow6">&nbsp;</td>
+					<td class="font-red" id="_offerVal_qrow6">&nbsp;</td>
+					<td class="font-red" id="_offerVol_qrow6">&nbsp;</td>
+					<td><span class="x-btn" onclick="removeActiveStock(6);">X</span></td>
+				</tr>
+				<tr id="_qrow7">
+					<td id="_nomor_qrow7">8</td>
+					<td class="code" id="_stock_qrow7">&nbsp;</td>
+					<td class="font-orange hilang" id="_prev_qrow7">&nbsp;</td>
+					<td class="font-red" id="_last_qrow7">&nbsp;</td>
+					<td class="font-red" id="_chg_qrow7">&nbsp;</td>
+					<td class="font-red" id="_persenchg_qrow7">&nbsp;</td>
+					<td class="font-red" id="_open_qrow7">&nbsp;</td>
+					<td class="font-red-2" id="_low_qrow7">&nbsp;</td>
+					<td class="font-red" id="_high_qrow7">&nbsp;</td>
+					<td class="font-red hilang" id="_buypersen_qrow7">&nbsp;</td>
+					<td class="font-red hilang" id="_avg_qrow7">&nbsp;</td>
+					<td class="font-red-2" id="_val_qrow7">&nbsp;</td>
+					<td class="font-orange" id="_vol_qrow7">&nbsp;</td>
+					<td class="font-red" id="_bidVol_qrow7">&nbsp;</td>
+					<td class="font-red" id="_bidVal_qrow7">&nbsp;</td>
+					<td class="font-red" id="_offerVal_qrow7">&nbsp;</td>
+					<td class="font-red" id="_offerVol_qrow7">&nbsp;</td>
+					<td><span class="x-btn" onclick="removeActiveStock(7);">X</span></td>
+				</tr>
+				<tr id="_qrow8">
+					<td id="_nomor_qrow8">9</td>
+					<td class="code" id="_stock_qrow8">&nbsp;</td>
+					<td class="font-orange hilang" id="_prev_qrow8">&nbsp;</td>
+					<td class="font-red" id="_last_qrow8">&nbsp;</td>
+					<td class="font-red" id="_chg_qrow8">&nbsp;</td>
+					<td class="font-red" id="_persenchg_qrow8">&nbsp;</td>
+					<td class="font-red" id="_open_qrow8">&nbsp;</td>
+					<td class="font-red-2" id="_low_qrow8">&nbsp;</td>
+					<td class="font-red" id="_high_qrow8">&nbsp;</td>
+					<td class="font-red hilang" id="_buypersen_qrow8">&nbsp;</td>
+					<td class="font-red hilang" id="_avg_qrow8">&nbsp;</td>
+					<td class="font-red-2" id="_val_qrow8">&nbsp;</td>
+					<td class="font-orange" id="_vol_qrow8">&nbsp;</td>
+					<td class="font-red" id="_bidVol_qrow8">&nbsp;</td>
+					<td class="font-red" id="_bidVal_qrow8">&nbsp;</td>
+					<td class="font-red" id="_offerVal_qrow8">&nbsp;</td>
+					<td class="font-red" id="_offerVol_qrow8">&nbsp;</td>
+					<td><span class="x-btn" onclick="removeActiveStock(8);">X</span></td>
+				</tr>
+				<tr id="_qrow9">
+					<td id="_nomor_qrow9">10</td>
+					<td class="code" id="_stock_qrow9">&nbsp;</td>
+					<td class="font-orange hilang" id="_prev_qrow9">&nbsp;</td>
+					<td class="font-red" id="_last_qrow9">&nbsp;</td>
+					<td class="font-red" id="_chg_qrow9">&nbsp;</td>
+					<td class="font-red" id="_persenchg_qrow9">&nbsp;</td>
+					<td class="font-red" id="_open_qrow9">&nbsp;</td>
+					<td class="font-red-2" id="_low_qrow9">&nbsp;</td>
+					<td class="font-red" id="_high_qrow9">&nbsp;</td>
+					<td class="font-red hilang" id="_buypersen_qrow9">&nbsp;</td>
+					<td class="font-red hilang" id="_avg_qrow9">&nbsp;</td>
+					<td class="font-red-2" id="_val_qrow9">&nbsp;</td>
+					<td class="font-orange" id="_vol_qrow9">&nbsp;</td>
+					<td class="font-red" id="_bidVol_qrow9">&nbsp;</td>
+					<td class="font-red" id="_bidVal_qrow9">&nbsp;</td>
+					<td class="font-red" id="_offerVal_qrow9">&nbsp;</td>
+					<td class="font-red" id="_offerVol_qrow9">&nbsp;</td>
+					<td><span class="x-btn" onclick="removeActiveStock(9);">X</span></td>
+				</tr>
+				<tr id="_qrow10">
+					<td id="_nomor_qrow10">11</td>
+					<td class="code" id="_stock_qrow10">&nbsp;</td>
+					<td class="font-orange hilang" id="_prev_qrow10">&nbsp;</td>
+					<td class="font-red" id="_last_qrow10">&nbsp;</td>
+					<td class="font-red" id="_chg_qrow10">&nbsp;</td>
+					<td class="font-red" id="_persenchg_qrow10">&nbsp;</td>
+					<td class="font-red" id="_open_qrow10">&nbsp;</td>
+					<td class="font-red-2" id="_low_qrow10">&nbsp;</td>
+					<td class="font-red" id="_high_qrow10">&nbsp;</td>
+					<td class="font-red hilang" id="_buypersen_qrow10">&nbsp;</td>
+					<td class="font-red hilang" id="_avg_qrow10">&nbsp;</td>
+					<td class="font-red-2" id="_val_qrow10">&nbsp;</td>
+					<td class="font-orange" id="_vol_qrow10">&nbsp;</td>
+					<td class="font-red" id="_bidVol_qrow10">&nbsp;</td>
+					<td class="font-red" id="_bidVal_qrow10">&nbsp;</td>
+					<td class="font-red" id="_offerVal_qrow10">&nbsp;</td>
+					<td class="font-red" id="_offerVol_qrow10">&nbsp;</td>
+					<td><span class="x-btn" onclick="removeActiveStock(10);">X</span></td>
+				</tr>
+				<tr id="_qrow11">
+					<td id="_nomor_qrow11">12</td>
+					<td class="code" id="_stock_qrow11">&nbsp;</td>
+					<td class="font-orange hilang" id="_prev_qrow11">&nbsp;</td>
+					<td class="font-red" id="_last_qrow11">&nbsp;</td>
+					<td class="font-red" id="_chg_qrow11">&nbsp;</td>
+					<td class="font-red" id="_persenchg_qrow11">&nbsp;</td>
+					<td class="font-red" id="_open_qrow11">&nbsp;</td>
+					<td class="font-red-2" id="_low_qrow11">&nbsp;</td>
+					<td class="font-red" id="_high_qrow11">&nbsp;</td>
+					<td class="font-red hilang" id="_buypersen_qrow11">&nbsp;</td>
+					<td class="font-red hilang" id="_avg_qrow11">&nbsp;</td>
+					<td class="font-red-2" id="_val_qrow11">&nbsp;</td>
+					<td class="font-orange" id="_vol_qrow11">&nbsp;</td>
+					<td class="font-red" id="_bidVol_qrow11">&nbsp;</td>
+					<td class="font-red" id="_bidVal_qrow11">&nbsp;</td>
+					<td class="font-red" id="_offerVal_qrow11">&nbsp;</td>
+					<td class="font-red" id="_offerVol_qrow11">&nbsp;</td>
+					<td><span class="x-btn" onclick="removeActiveStock(11);">X</span></td>
+				</tr>
+				<tr id="_qrow12">
+					<td id="_nomor_qrow12">13</td>
+					<td class="code" id="_stock_qrow12">&nbsp;</td>
+					<td class="font-orange hilang" id="_prev_qrow12">&nbsp;</td>
+					<td class="font-red" id="_last_qrow12">&nbsp;</td>
+					<td class="font-red" id="_chg_qrow12">&nbsp;</td>
+					<td class="font-red" id="_persenchg_qrow12">&nbsp;</td>
+					<td class="font-red" id="_open_qrow12">&nbsp;</td>
+					<td class="font-red-2" id="_low_qrow12">&nbsp;</td>
+					<td class="font-red" id="_high_qrow12">&nbsp;</td>
+					<td class="font-red hilang" id="_buypersen_qrow12">&nbsp;</td>
+					<td class="font-red hilang" id="_avg_qrow12">&nbsp;</td>
+					<td class="font-red-2" id="_val_qrow12">&nbsp;</td>
+					<td class="font-orange" id="_vol_qrow12">&nbsp;</td>
+					<td class="font-red" id="_bidVol_qrow12">&nbsp;</td>
+					<td class="font-red" id="_bidVal_qrow12">&nbsp;</td>
+					<td class="font-red" id="_offerVal_qrow12">&nbsp;</td>
+					<td class="font-red" id="_offerVol_qrow12">&nbsp;</td>
+					<td><span class="x-btn" onclick="removeActiveStock(12);">X</span></td>
+				</tr>
+				<tr id="_qrow13">
+					<td id="_nomor_qrow13">14</td>
+					<td class="code" id="_stock_qrow13">&nbsp;</td>
+					<td class="font-orange hilang" id="_prev_qrow13">&nbsp;</td>
+					<td class="font-red" id="_last_qrow13">&nbsp;</td>
+					<td class="font-red" id="_chg_qrow13">&nbsp;</td>
+					<td class="font-red" id="_persenchg_qrow13">&nbsp;</td>
+					<td class="font-red" id="_open_qrow13">&nbsp;</td>
+					<td class="font-red-2" id="_low_qrow13">&nbsp;</td>
+					<td class="font-red" id="_high_qrow13">&nbsp;</td>
+					<td class="font-red hilang" id="_buypersen_qrow13">&nbsp;</td>
+					<td class="font-red hilang" id="_avg_qrow13">&nbsp;</td>
+					<td class="font-red-2" id="_val_qrow13">&nbsp;</td>
+					<td class="font-orange" id="_vol_qrow13">&nbsp;</td>
+					<td class="font-red" id="_bidVol_qrow13">&nbsp;</td>
+					<td class="font-red" id="_bidVal_qrow13">&nbsp;</td>
+					<td class="font-red" id="_offerVal_qrow13">&nbsp;</td>
+					<td class="font-red" id="_offerVol_qrow13">&nbsp;</td>
+					<td><span class="x-btn" onclick="removeActiveStock(13);">X</span></td>
+				</tr>
+				<tr id="_qrow14">
+					<td id="_nomor_qrow14">15</td>
+					<td class="code" id="_stock_qrow14">&nbsp;</td>
+					<td class="font-orange hilang" id="_prev_qrow14">&nbsp;</td>
+					<td class="font-red" id="_last_qrow14">&nbsp;</td>
+					<td class="font-red" id="_chg_qrow14">&nbsp;</td>
+					<td class="font-red" id="_persenchg_qrow14">&nbsp;</td>
+					<td class="font-red" id="_open_qrow14">&nbsp;</td>
+					<td class="font-red-2" id="_low_qrow14">&nbsp;</td>
+					<td class="font-red" id="_high_qrow14">&nbsp;</td>
+					<td class="font-red hilang" id="_buypersen_qrow14">&nbsp;</td>
+					<td class="font-red hilang" id="_avg_qrow14">&nbsp;</td>
+					<td class="font-red-2" id="_val_qrow14">&nbsp;</td>
+					<td class="font-orange" id="_vol_qrow14">&nbsp;</td>
+					<td class="font-red" id="_bidVol_qrow14">&nbsp;</td>
+					<td class="font-red" id="_bidVal_qrow14">&nbsp;</td>
+					<td class="font-red" id="_offerVal_qrow14">&nbsp;</td>
+					<td class="font-red" id="_offerVol_qrow14">&nbsp;</td>
+					<td><span class="x-btn" onclick="removeActiveStock(14);">X</span></td>
+				</tr>
+			</tbody>    
+        </table>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $('#keywords').tablesorter();
+        });
+    </script>
+</section>
+			
+
+
+			<section id="cta" class="footer-banner">
+				<div class="container">
+					<div class="col-md-4 col-md-offset-2 title-footerbanner">
+						<span>PT. Victoria Securities Indonesia<br>
+								Terdaftar dan Diawasi oleh</span>
+					</div>
+					<div class="col-md-4 logo-ojk">
+						<img src="images/ojk.png" width="150px">
+					</div>
+					</header>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<div id="footer">
+				<div class="col-md-4">
+					<img src="images/logo-white.png" class="logo-footer">
+				</div>
+				<div class="col-md-4 footer-menu">
+					<ul>
+						<li><a href="#">ABOUTS US</a></li>
+						<li><a href="#">GROUP</a></li>
+						<li><a href="#">CONTACT</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 copyright">
+					&copy; copyright Victoria Securities | All Rights Reserved
+				</div>
+
+				<!-- Icons -->
+
+
+				<!-- Copyright -->
+
+
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+		<script>
+			jQuery(document).ready(function() {
+				function randomgen() {
+					var rannumber = '';
+					for (ranNum = 1; ranNum <= 6; ranNum++) {
+						rannumber += Math.floor(Math.random() * 10).toString();
+					}
+					$('#verifyNum').html(rannumber);
+					$('#verifyNumHidden').val(rannumber);
+				}
+				randomgen();
+				//Verification number generate code Ends here
+
+				//Validation Starts Here
+				$('#MyForm').submit(function() {
+					if ($('#enterVerify').val() == $('#verifyNumHidden').val()) {
+						$('form').attr('action', 'https://example.com/MyForm');
+						return true;
+					} else {
+						alert("Please Enter Correct Verification Number");
+						randomgen();
+						$('#enterVerify').select();
+						$('#enterVerify').focus();
+						return false;
+					}
+				});
+			});
+		</script>
+
+
+	</body>
+
+</html>

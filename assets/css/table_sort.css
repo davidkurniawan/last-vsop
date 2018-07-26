@@ -1,0 +1,159 @@
+.stock_radio_filter
+{
+    border-left: solid 2px  #E6E7E8;
+    border-right: solid 2px  #E6E7E8;
+}
+#keywords {
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  width: 100%;
+  border: solid 2px  #E6E7E8;
+  border-bottom: solid 3px #B82029;
+}
+
+
+#keywords thead {
+  cursor: pointer;
+  background: #c9dff0;
+}
+#keywords thead tr th {
+  font-weight: 400;
+  font-size: 9pt;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border:none;
+  background: #B82029;
+  color: #fff;
+}
+#keywords thead tr th:first-child
+{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#keywords thead tr td:last-child
+{
+  padding-left: 2px;
+  padding-right: 2px;
+}
+#keywords thead tr th span {
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+
+
+#keywords thead tr th.headerSortUp span {
+  background-image: url('../../images/up-arrow.png');
+  background-size: 12px;
+    background-position-y: 3px;
+}
+#keywords thead tr th.headerSortDown span {
+  background-image: url('../../images/down-arrow.png');
+  background-size: 12px;
+    background-position-y: 3px;
+}
+
+
+
+#keywords tbody tr {
+  color: #555;
+  background: none;
+}
+#keywords tbody tr td {
+  text-align: center;
+  font-size: 11pt;
+  width: auto;
+  border:none !important;
+}
+#keywords tbody tr td:last-child
+  {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  #keywords tbody tr td
+  {
+    padding-bottom: 10px;
+  }
+#keywords tbody tr td.lalign {
+  text-align: left;
+}
+.row-gray
+{
+  background: #E6E7E8 !important;
+}
+.icon
+{
+  display: inline-block;
+  height: 10px;
+}
+.icon img
+{
+
+  width: 12px;
+}
+.code
+{
+  color: #27AAE1 !important;
+}
+.green
+{
+  background: #A8CE54;
+  color: #fff;
+  display: inline-block;
+  width: 100px;
+  margin-top: 5px;
+}
+.orange
+{
+
+  background: #F79653;
+  color: #fff;
+  display: inline-block;
+  width: 100px;
+  margin-top: 5px;
+}
+.blue
+{
+  background: #499ED7;
+  color: #fff;
+  display: inline-block;
+  width: 100px;
+  margin-top: 5px;
+}
+.blue-2
+{
+  background: #77C4D3;
+  color: #fff;
+  display: inline-block;
+  width: 100px;
+  margin-top: 5px;
+}
+.red
+{
+  background: #F38398;
+  color: #fff;
+  display: inline-block;
+  width: 100px;
+  margin-top: 5px;
+}
+.font-orange
+{
+  color: #F7941E !important;
+}
+.font-red
+{
+  color: #39B54A !important;
+}
+.font-red-2
+{
+  color: #B82029 !important;
+}
+.x-btn
+{
+
+  padding:3px;
+  background: #939598;
+  color: #fff;
+}

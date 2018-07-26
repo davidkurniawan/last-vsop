@@ -1,0 +1,393 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>Victoria Securities</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/page.css" />
+		<link rel="stylesheet" href="assets/css/theme.css" />
+
+		<link rel="stylesheet" href="assets/css/chart.css" />
+
+		<link rel="stylesheet" href="assets/css/responsive.css" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script type="text/javascript" src="assets/js/datetimepicker/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/datetimepicker/moment.min.js"></script>
+		<script type="text/javascript" src="assets/js/datetimepicker/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/js/datetimepicker/daterangepicker.css" />
+
+	</head>
+
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<div id="header">
+
+				<!-- Logo -->
+				<img src="images/VS.png" class="logo" id="logo">
+
+				<div class="logout-area">
+				LOGOUT
+				<a href="#"><img src="images/logoutbtn.png" class="logout-icon"></a>
+				</div>
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li class="current"><a href="#">ACCOUNT</a>
+             <ul>
+                <li><a href="#">Account Info</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Order List</a></li>
+                <li><a href="#">Transaction List</a></li>
+                <li><a class="hilang" href="#">Historical Transaction List</a></li>
+                <li><a href="#">Financial History</a></li>
+                <li><a href="#">Change Password</a></li>
+
+              </ul>
+            </li>
+						<li><a href="#">QUOTE</a>
+			<ul>
+                <li><a href="#">Running Quote</a></li>
+                <li><a href="#">Stock Quote</a></li>
+                <li><a href="#">Historical Price</a></li>
+                <li><a href="#">Watch List</a></li>
+
+              </ul>
+						</li>
+						<li><a href="#">RANKING</a>
+										<ul>
+                <li><a href="#">Stock Tracking</a></li>
+                <li><a href="#">Broker Rangking</a></li>
+                <li><a href="#">Broker Activity</a></li>
+                <li><a href="#">Foreign Activity</a></li>
+
+              </ul>
+						</li>
+						<li><a href="#">CHART</a></li>
+						<li><a href="#">NEWS</a></li>
+            <li><a href="#">TOURNAMENT</a></li>
+					</ul>
+				</nav>
+
+			</div>
+
+			<!-- Banner -->
+			<section class="content">
+      <div class="breadcrumb">
+        <span class="right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span><a href="#">Chart</a>
+      </div>
+
+			</section>
+
+      <div class="clearfix"></div>
+      <section class="index-summary hilang">
+        <div class="col-md-2 item index-box first-box">
+          <div class="summary-title">
+            <div class=stock-code><b>IHSG</b></div>
+          </div>
+			<div class="summary-value">
+			<div class="stock-index">
+            <h3>5,148</h3>
+            </div>
+            <div class="stock-index-percent">
+            <h6>-0.22 | -0.42 %</h6>
+            <!-- <h6col-xs-12 col-sm-12 col-md-12 col-1g-12>-0.42 %</h6> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 item index-box add-top-padding">
+					<div class="col-md-6 index-prev">
+						Prev
+					</div>
+					<div class="col-md-6 index-prev-value">
+						5,146,038
+					</div>
+					<div class="col-md-6 index-open">
+						Open
+					</div>
+					<div class="col-md-6 index-open-value">
+						5,160.748
+					</div>
+        </div>
+        <div class="col-md-2 item index-box add-top-padding">
+          <div class="col-md-6 index-prev">
+						Hi
+					</div>
+					<div class="col-md-6 index-prev-value">
+						5,204,038
+					</div>
+					<div class="col-md-6 index-open">
+						Lo
+					</div>
+					<div class="col-md-6 index-open-value">
+						5,518.727
+					</div>
+        </div>
+        <div class="col-md-2 item index-box">
+          			<div class="col-md-6 index-Treq">
+						Treq
+					</div>
+					<div class="col-md-6 index-Treq-value">
+						66,434
+					</div>
+					<div class="col-md-6 index-TVol">
+						TVol
+					</div>
+					<div class="col-md-6 index-TVol-value">
+						17,778,143
+					</div>
+					<div class="col-md-6 index-TVal">
+						TVal
+					</div>
+					<div class="col-md-6 index-TVal-value">
+						1.28t
+					</div>
+        </div>
+        <div class="col-md-2 item index-box">
+                    <div class="col-md-6 index-FFreq">
+						FFreq
+					</div>
+					<div class="col-md-6 index-FFreq-value">
+						24,559
+					</div>
+					<div class="col-md-6 index-FVol">
+						FVol
+					</div>
+					<div class="col-md-6 index-FVol-value">
+						1,371,000
+					</div>
+					<div class="col-md-6 index-FVal">
+						FVal
+					</div>
+					<div class="col-md-6 index-FVal-value">
+						484.83b
+					</div>
+        </div>
+        <div class="col-md-2 index-box last-box">
+                              <div class="col-md-6 index-FBuyVal">
+						FBuyVal
+					</div>
+					<div class="col-md-6 index-FBuyVal-value">
+						24,559
+					</div>
+					<div class="col-md-6 index-FSellVal">
+						FSellVal
+					</div>
+					<div class="col-md-6 index-FSellVal-value">
+						1,371,000
+					</div>
+					<div class="col-md-6 index-FNettVal">
+						FNettVal
+					</div>
+					<div class="col-md-6 index-FNettVal-value">
+						484.83b
+					</div>
+        </div>
+      </section>
+
+	  <section id="charts">
+			<div class="container">
+
+					 <div class="head-panel">
+
+						<ul class="panel-menu stocksectoral">
+
+							<li><a href="#stock" data-container="chart-stock">Stock</a></li>
+							<li><a href="#sectoral" data-container="chart-sectoral">Sectoral</a></li>
+							<li><a href="#index"  data-container="chart-index">Index</a></li>
+
+						</ul>
+
+						<!-- <div class="bookmark"><a href="#">Add to my stock</a></div> -->
+					</div>
+
+
+				<div class="chartwrap">
+					<!--  header start -->
+					<div class="action">
+						<div class="broker_filter">
+							<form class="form" action="">
+								<div>
+									<div class="foreign-filter">
+										<label for="filter" class="filter-title">Code
+											<select id="stocksectoralselect" class="foreign-stock-list block ">
+												<option value="stock" selected>Stock</option>
+												<option value="sectoral" selected>Sectoral</option>
+												<option value="index" selected>Index</option>
+											</select>
+										</label>
+									</div>
+								</div>
+
+							</form>
+						</div>
+					</div>
+
+
+					<!-- CHART CONTAINER -->
+					<!-- <div id="chart-menu-wrap"> -->
+						<!-- <ul class="chartmenu"> -->
+								<!-- <li class="hassub"><a href="javascript:;" id="indicator"><i class="fa fa-plus"> -->
+									<!-- </i> Add Indicator</a> -->
+									<!-- <div class="submenu"> -->
+										<!-- <ul class=""> -->
+											<!-- <li><a href="">Stock Name</a></li> -->
+											<!-- <li><a href="">Stock Name</a></li> -->
+											<!-- <li><a href="">Stock Name</a></li> -->
+											<!-- <li><a href="">Stock Name</a></li> -->
+											<!-- <li><a href="">Stock Name</a></li> -->
+										<!-- </ul> -->
+									<!-- </div> -->
+								<!-- </li> -->
+								<!-- <li><a href="#" id="compare"><i class="fa fa-plus"></i> Compare</a></li> -->
+								<!-- <li><a href="#" id="charttype"><i class="fa fa-area-chart"></i> Area</a></li> -->
+								<!-- <li><a href="#" id="reset"><i class="fa fa-undo"></i> Reset</a></li> -->
+							<!-- </ul> -->
+					<!-- </div> -->
+
+				</div>
+
+
+
+				<div id="stock" class="panel">
+					<div class="chartwrap">
+						<div id="chart-stock" class="chart-container" style="height: 500px"></div>
+					</div>
+				</div>
+
+				<div id="sectoral" class="panel">
+					<div class="chartwrap">
+						<div id="chart-sectoral" class="chart-container" style="height: 500px"></div>
+					</div>
+				</div>
+
+
+				<div id="index" class="panel">
+					<div class="chartwrap">
+						<div id="chart-index" class="chart-container" style="height: 500px"></div>
+					</div>
+				</div>
+			</div>
+	  </section>
+
+
+
+	<section id="cta" class="footer-banner">
+				<div class="container">
+					<div class="col-md-4 col-md-offset-2 title-footerbanner">
+						<span>PT. Victoria Securities Indonesia<br>
+								Terdaftar dan Diawasi oleh</span>
+					</div>
+					<div class="col-md-4 logo-ojk">
+						<img src="images/ojk.png" width="150px">
+					</div>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<div id="footer">
+				<div class="col-md-4">
+					<img src="images/logo-white.png" class="logo-footer">
+				</div>
+				<div class="col-md-4 footer-menu">
+					<ul>
+						<li><a href="#">ABOUTS US</a></li>
+						<li><a href="#">GROUP</a></li>
+						<li><a href="#">CONTACT</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 copyright">
+					&copy; copyright Victoria Securities | All Rights Reserved
+				</div>
+
+				<!-- Icons -->
+
+
+				<!-- Copyright -->
+
+
+			</div>
+
+		<!-- Scripts -->
+
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+
+		<!-- load highstock -->
+		<script type="text/javascript" src="assets/js/highstock/code/highstock.js"></script>
+
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/stocksectoralindex.js"></script>
+
+		<script>
+			jQuery(document).ready(function() {
+				function randomgen() {
+					var rannumber = '';
+					for (ranNum = 1; ranNum <= 6; ranNum++) {
+						rannumber += Math.floor(Math.random() * 10).toString();
+					}
+					$('#verifyNum').html(rannumber);
+					$('#verifyNumHidden').val(rannumber);
+				}
+				randomgen();
+				//Verification number generate code Ends here
+
+				//Validation Starts Here
+				$('#MyForm').submit(function() {
+					if ($('#enterVerify').val() == $('#verifyNumHidden').val()) {
+						$('form').attr('action', 'https://example.com/MyForm');
+						return true;
+					} else {
+						alert("Please Enter Correct Verification Number");
+						randomgen();
+						$('#enterVerify').select();
+						$('#enterVerify').focus();
+						return false;
+					}
+				});
+			});
+		</script>
+
+		<script type="text/javascript">
+					$(function() {
+
+									$('input[name="datefilter"]').daterangepicker({
+										autoUpdateInput: false,
+										showDropdowns: true,
+										linkedCalendars: false,
+										dateLimit: {
+										days: 365
+										},
+										locale: {
+											cancelLabel: 'Clear',
+											format: "MMMM DD, YYYY",
+											separator: " - "
+										}
+									});
+
+									$('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+										$(this).val(picker.startDate.format('MMMM DD, YYYY') + ' - ' + picker.endDate.format('MMMM DD, YYYY'));
+									});
+
+									$('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+										$(this).val('');
+									});
+
+									});
+								</script>
+
+	</body>
+
+</html>

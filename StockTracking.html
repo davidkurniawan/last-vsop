@@ -1,0 +1,492 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>Victoria Securities</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/page.css" />
+		<link rel="stylesheet" href="assets/css/theme.css" />
+		<link rel="stylesheet" href="assets/css/responsive.css" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script type="text/javascript" src="assets/js/datetimepicker/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/datetimepicker/moment.min.js"></script>
+		<script type="text/javascript" src="assets/js/datetimepicker/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/js/datetimepicker/daterangepicker.css" />
+<link rel="stylesheet" href="assets/css/datatabel.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap.min.css" />
+	</head>
+
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<div id="header">
+
+				<!-- Logo -->
+				<img src="images/VS.png" class="logo" id="logo">
+
+				<div class="logout-area">
+				LOGOUT
+				<a href="#"><img src="images/logoutbtn.png" class="logout-icon"></a>
+				</div>
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li class="current"><a href="#">ACCOUNT</a>
+              <ul>
+                <li><a href="AccountInfo.html">Account Info</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="OrderList.html">Order List</a></li>
+                <li><a href="TransactionList.html">Transaction List</a></li>
+                <li><a href="HistoricalTransactionList.html">Historical Transaction List</a></li>
+                <li><a href="FinancialHistory.html">Financial History</a></li>
+                <li><a href="PasswordAndPin.html">Change Password</a></li>
+
+              </ul>
+            </li>
+						<li><a href="#">QUOTE</a>
+						<ul>
+                <li><a href="RunningQuote.html">Running Quote</a></li>
+                <li><a href="#">Stock Quote</a></li>
+                <li><a href="HistoricalPrice.html">Historical Price</a></li>
+                <li><a href="WatchList.html">Watch List</a></li>
+
+              </ul>
+              </li>
+						<li><a href="#">RANKING</a>
+						<ul>
+                <li><a href="StockTracking.html">Stock Tracking</a></li>
+                <li><a href="BrokerRangking.html">Broker Rangking</a></li>
+                <li><a href="BrokerActivity.html">Broker Activity</a></li>
+                <li><a href="ForeignActivity.html">Foreign Activity</a></li>
+
+              </ul>
+              </li>
+						<li><a href="#">CHART</a></li>
+						<li><a href="#">NEWS</a>
+							<ul>
+									<li><a href="Research.html">Research</a></li>
+							</ul>
+						</li>
+            <li><a href="Tournament.html">TOURNAMENT</a></li>
+					</ul>
+				</nav>
+
+			</div>
+
+			<!-- Banner -->
+			<section class="content">
+      <div class="breadcrumb">
+        <span class="right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span><a href="#">Account</a><span class="right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span><a href="#">Stock Tracking</a>
+      </div>
+
+			</section>
+
+      <!-- <section class="account-nav"> -->
+        <!-- <div class="col-md-12"> -->
+          <!-- <div class="col-md-8"> -->
+          <!-- <form action="#"> -->
+          <!-- <label class="account-menu-label">Account</label> -->
+          <!-- <select name="" class="account-menu"> -->
+          <!-- <option value="#" selected>U06</option> -->
+          <!-- </select> -->
+          <!-- <button class="btn-account-load">Load</button> -->
+          <!-- </form> -->
+
+          <!-- </div> -->
+
+          <!-- <div class="col-md-4 no-padding-left"> -->
+          <!-- <div class="account-info"> -->
+          <!-- <div class="account-avatar"> -->
+          <!-- <img src="images/user-icon.png" class="logout-icon"> -->
+          <!-- </div> -->
+          <!-- <div class="account-name"> -->
+          <!-- <h4 class="account-id">U06-Umar widodo Tiono (R)</h4> -->
+          <!-- <h4 class="account-sales">Sales/Dealer : Bambang 021 7278 2310</h4> -->
+          <!-- </div> -->
+          <!-- </div> -->
+          <!-- </div> -->
+        <!-- </div> -->
+
+
+      <!-- </section> -->
+      <div class="clearfix"></div>
+      <section class="index-summary">
+        <div class="col-md-2 item index-box first-box">
+          <div class="summary-title">
+            <div class=stock-code><b>IHSG</b></div>
+          </div>
+			<div class="summary-value">
+			<div class="col-md-8 stock-index">
+            <h3>5,148</h3>
+            </div>
+            <div class="col-md-4 stock-index-percent">
+            <h6>-0.22</h6>
+            <h6>-0.42 %</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 item index-box add-top-padding">
+					<div class="col-md-6 index-prev">
+						Prev
+					</div>
+					<div class="col-md-6 index-prev-value">
+						5,146,038
+					</div>
+					<div class="col-md-6 index-open">
+						Open
+					</div>
+					<div class="col-md-6 index-open-value">
+						5,160.748
+					</div>
+        </div>
+        <div class="col-md-2 item index-box add-top-padding">
+          <div class="col-md-6 index-prev">
+						Hi
+					</div>
+					<div class="col-md-6 index-prev-value">
+						5,204,038
+					</div>
+					<div class="col-md-6 index-open">
+						Lo
+					</div>
+					<div class="col-md-6 index-open-value">
+						5,518.727
+					</div>
+        </div>
+        <div class="col-md-2 item index-box">
+          			<div class="col-md-6 index-Treq">
+						Treq
+					</div>
+					<div class="col-md-6 index-Treq-value">
+						66,434
+					</div>
+					<div class="col-md-6 index-TVol">
+						TVol
+					</div>
+					<div class="col-md-6 index-TVol-value">
+						17,778,143
+					</div>
+					<div class="col-md-6 index-TVal">
+						TVal
+					</div>
+					<div class="col-md-6 index-TVal-value">
+						1.28t
+					</div>
+        </div>
+        <div class="col-md-2 item index-box">
+                    <div class="col-md-6 index-FFreq">
+						FFreq
+					</div>
+					<div class="col-md-6 index-FFreq-value">
+						24,559
+					</div>
+					<div class="col-md-6 index-FVol">
+						FVol
+					</div>
+					<div class="col-md-6 index-FVol-value">
+						1,371,000
+					</div>
+					<div class="col-md-6 index-FVal">
+						FVal
+					</div>
+					<div class="col-md-6 index-FVal-value">
+						484.83b
+					</div>
+        </div>
+        <div class="col-md-2 index-box last-box">
+                              <div class="col-md-6 index-FBuyVal">
+						FBuyVal
+					</div>
+					<div class="col-md-6 index-FBuyVal-value">
+						24,559
+					</div>
+					<div class="col-md-6 index-FSellVal">
+						FSellVal
+					</div>
+					<div class="col-md-6 index-FSellVal-value">
+						1,371,000
+					</div>
+					<div class="col-md-6 index-FNettVal">
+						FNettVal
+					</div>
+					<div class="col-md-6 index-FNettVal-value">
+						484.83b
+					</div>
+        </div>
+      </section>
+			<section id="tab-bg-ol" class="table_index">
+			<div class="col-md-12 table-head no-padding">
+			<div class="col-md-2 head-bg">
+			<form action="">
+			<input type="text" class="input-company" value="ABCDEFGHJ">
+			</div>
+			<div class="col-md-2 company-title">
+			<h5>Indo Tambangraya Megah Tbk</h5>
+			</div>
+			<div class="col-md-2 add-padding-5px date-range-title ">
+			<h3>Time Period</h3>
+			</div>
+			<div class="col-md-3 add-padding-5px date_range_box">
+<input type="text" name="datefilter" value="" / class="date_range">
+
+<script type="text/javascript">
+$(function() {
+
+  $('input[name="datefilter"]').daterangepicker({
+      autoUpdateInput: false,
+      showDropdowns: true,
+      linkedCalendars: false,
+      dateLimit: {
+      days: 365
+    },
+      locale: {
+          cancelLabel: 'Clear',
+           format: "MMMM DD, YYYY",
+           separator: " - "
+      }
+  });
+
+  $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('MMMM DD, YYYY') + ' - ' + picker.endDate.format('MMMM DD, YYYY'));
+  });
+
+  $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+      $(this).val('');
+  });
+
+});
+</script>
+			</div>
+			<div class="col-md-3 btn-action no-padding-lr">
+			<button href="#" class="btn-table-red">load</button>
+			<!-- <a href="#" class="btn-table-red">Export Excel</a> -->
+			</div>
+			</form>
+			</div>
+<div class="table-responsive tab_visible">
+	<table id="myTable" style="width:100%">
+		<thead>
+			<tr class="header-table">
+				<th>Broker</th>
+				<th>Broker Name</th>
+				<th>B Freq</th>
+				<th>B Vol</th>
+				<th>B Avg</th>
+				<th>B %</th>
+				<th>S Freq</th>
+				<th>S Vol</th>
+				<th>S Avg</th>
+				<th>S %</th>
+				<th>Net</th>
+			</tr>
+		</thead>
+		<tbody id="_tsorter">
+			<tr class="first-row">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
+<script>
+    $(document).ready(function(){
+    $('#myTable').DataTable();
+});
+</script>
+			</section>
+
+
+			<section id="cta" class="footer-banner">
+				<div class="container">
+					<div class="col-md-4 col-md-offset-2 title-footerbanner">
+						<span>PT. Victoria Securities Indonesia<br>
+								Terdaftar dan Diawasi oleh</span>
+					</div>
+					<div class="col-md-4 logo-ojk">
+						<img src="images/ojk.png" width="150px">
+					</div>
+					</header>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<div id="footer">
+				<div class="col-md-4">
+					<img src="images/logo-white.png" class="logo-footer">
+				</div>
+				<div class="col-md-4 footer-menu">
+					<ul>
+						<li><a href="#">ABOUTS US</a></li>
+						<li><a href="#">GROUP</a></li>
+						<li><a href="#">CONTACT</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 copyright">
+					&copy; copyright Victoria Securities | All Rights Reserved
+				</div>
+
+				<!-- Icons -->
+
+
+				<!-- Copyright -->
+
+
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+		<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+		<script>
+			jQuery(document).ready(function() {
+				function randomgen() {
+					var rannumber = '';
+					for (ranNum = 1; ranNum <= 6; ranNum++) {
+						rannumber += Math.floor(Math.random() * 10).toString();
+					}
+					$('#verifyNum').html(rannumber);
+					$('#verifyNumHidden').val(rannumber);
+				}
+				randomgen();
+				//Verification number generate code Ends here
+
+				//Validation Starts Here
+				$('#MyForm').submit(function() {
+					if ($('#enterVerify').val() == $('#verifyNumHidden').val()) {
+						$('form').attr('action', 'https://example.com/MyForm');
+						return true;
+					} else {
+						alert("Please Enter Correct Verification Number");
+						randomgen();
+						$('#enterVerify').select();
+						$('#enterVerify').focus();
+						return false;
+					}
+				});
+			});
+		</script>
+
+
+	</body>
+
+</html>

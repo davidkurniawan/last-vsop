@@ -1,0 +1,1136 @@
+#14 {
+		display: none !important;
+	}
+@media screen and (min-width: 1024px) and (max-width:1200px) {
+    .table_index .table-head h3, h5
+    {
+        font-size: 12pt;
+    }
+    #nav >ul
+    {
+        margin-left: 50px;
+    }
+    #nav > ul > li {
+        width: 130px !important;
+    }
+        #header
+    {
+        height: 100px !important;
+        padding-top: 5px !important;
+    }
+         .breadcrumb
+    {
+        margin-top: 40px !important;
+    }
+    .account-menu
+    {
+        width: 150px;
+    }
+    .account-id, .account-sales
+    {
+        font-size: 12px;
+    }
+    .footer-menu
+    {
+        margin-left: -50px !important;
+        font-size: 12pt !important;
+    }
+    .copyright
+    {
+        width: 320px;
+        padding-right: 0px !important;
+    }
+
+
+    /* Page 2 */
+
+    .summary-title
+    {
+        font-size: 9px !important;
+    }
+
+    .table_area table th
+
+    {
+        font-size: 12pt;
+    }
+    .table_area table tr td
+    {
+        font-size: 10pt;
+    }
+
+        .logo
+    {
+        margin-left: 50px !important;
+    }
+    .logo-footer
+    {
+        margin-top: 5px !important;
+        width: 90%;
+    }
+    .account-avatar
+    {
+        padding-top: 0px;
+    }
+
+
+    /*page 4 */
+    .stock-index
+    {
+        /* width: 70px; */
+    }
+    .stock-index h3
+    {
+        font-size: 22px !important;
+    }
+    .stock-index-percent
+    {
+        /* width: 55px; */
+        /* margin-left: 2px; */
+        /* padding-left: 2px; */
+    }
+    .stock-index-percent h6
+    {
+        text-align: left;
+        font-size: 14px;
+    }
+    .index-prev,.index-prev-value,.index-open,.index-open-value, .index-Treq ,.index-Treq-value,.index-TVol,.index-TVol-value, .index-TVal, .index-TVal-value,.index-FFreq,.index-FFreq-value,.index-FVol,.index-FVol-value,.index-FVal-value,.index-FBuyVal,.index-FBuyVal-value,.index-FSellVal,.index-FSellVal-value,.index-FNettVal,.index-FNettVal-value,.index-FVal
+    {
+        font-size: 14px;
+        padding:0px;
+    }
+    .date-range-title
+    {
+        width: 100px;
+    }
+    .company-title
+    {
+        width: 210px;
+        padding-top: 5px;
+    }
+    .btn-action
+    {
+        font-size: 12px;
+        width: 150px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 7px;
+    }
+    .btn-table-red
+    {
+        font-size: 12px;
+        padding-top: 3px;
+        padding-bottom: 5px
+    }
+    .date_range
+    {
+        width: 100px;
+    }
+    .date_range_box
+    {
+        width: 170px;
+    }
+        .date_range_box_foreign
+    {
+        width: 175px;
+    }
+    .date_range_foreign
+    {
+        width: 100px;
+        height: 50px;
+    }
+    .order_filter select
+    {
+        font-size: 14px;
+          background-position:
+    calc(100% - 6px) calc(5px + 2px),
+    calc(100% - 10px) calc(10px + 5px),
+    100% 0;
+  background-size:
+    10px 20px,
+    10px 20px,
+    2.5em 2.5em;
+    padding-top: 5px;
+    padding-bottom: 7px;
+
+    }
+    .order_filter .btn-account-load
+    {
+       height: 30px;
+    }
+    .order_filter
+    {
+        padding-left: 0px;
+    }
+    .order_filter input
+    {
+        width: 200px;
+    }
+    .table_index table th
+    {
+        font-size: 12px;
+    }
+
+    .broker_filter .col-md-3
+    {
+        width: 350px;
+    }
+    .broker_filter .col-md-3 .filter-title
+    {
+        margin-left: 0px !important;
+        font-size: 12pt;
+    }
+    .broker_filter .col-md-3 .broker-name-list
+    {
+        font-size: 12pt;
+    }
+    .broker_filter .col-md-2 h3
+    {
+        font-size: 12pt !important;
+    }
+
+    .date-range-title-broker
+    {
+            width: 90px !important;
+    padding-right: 0px;
+    padding-left: 0px;
+    }
+    .broker_filter input
+    {
+        width: 180px !important;
+    }
+    .date_range_box
+    {
+        width: 200px !important;
+    }
+.table_index .table-head .head-bg
+{
+    width: 200px !important;
+    background-position: -25px;
+}
+.table_index .table-head .head-bg input
+{
+    width: 150px !important;
+}
+#keywords thead tr th
+{
+font-size: 8px !Important;
+}
+#keywords tbody tr td
+{
+  font-size: 10px !important;
+}
+.green,.orange,.blue,.blue-2,.red
+{
+  width: 60px !important;
+}
+#keywords thead tr th span
+{
+  padding-right: 15px !important;
+}
+#keywords thead tr th.headerSortUp span {
+    background-position-y: 1px;
+}
+#keywords thead tr th.headerSortDown span {
+    background-position-y: 1px;
+}
+.watch_list_head .col-md-7
+{
+  width: 50%;
+  padding-top: 0px !important;
+}
+.watch_list_head .col-md-5
+{
+  width: 50%;
+}
+.add_stock_btn
+{
+  width: 100px !important;
+  height: 40px;
+  font-size: 14px;
+}
+.refresh_btn
+{
+  height: 30px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+.refresh_btn img
+{
+  width: 20px !important;
+}
+.stock_name
+{
+  width: 200px !important;
+  padding:5px !important;
+  height: 40px;
+  float: left;
+  margin-right: 15px;
+  border-radius: 15px !important;
+  -moz-border-radius: 15px !important;
+}
+.Watchlist-title
+{
+  font-size: 18pt;
+}
+}
+@media screen and (max-width: 1280px) {
+
+        .stock-index h3
+    {
+        font-size: 28pt;
+    }
+        .broker_filter .col-md-3
+    {
+        width: 350px;
+    }
+    .broker_filter .col-md-3 .filter-title
+    {
+        margin-left: 0px !important;
+        font-size: 12pt;
+    }
+    .broker_filter .col-md-3 .broker-name-list
+    {
+        font-size: 12pt;
+        width: 210px;
+    }
+    .broker_filter .col-md-2 h3
+    {
+        font-size: 12pt !important;
+    }
+
+    .date-range-title-broker
+    {
+        width: 130px !important;
+    }
+    .broker_filter input
+    {
+        width: 250px !important;
+    }
+    .date_range_box
+    {
+        width: 250px !important;
+    }
+    .logo-footer
+    {
+        margin-top: 20px;
+    }
+    .logo
+    {
+        margin-left: 100px;
+    }
+    #nav > ul {
+            margin: 0;
+            margin-left: 75px;
+        }
+
+    #nav > ul > li {
+        width: 170px;
+    }
+    #header
+    {
+        height: 190px;
+    }
+    .logout-icon
+    {
+        margin-top: 0px;
+    }
+    .summary-title
+    {
+        font-size: 10pt
+    }
+        #footer .copyright
+        {
+            padding-right: 0px;
+        }
+             .breadcrumb
+    {
+        margin-left: 30px;
+        margin-top: 55px !important;
+    }
+        .logo-footer
+    {
+        margin-top: -4px;
+    }
+    .btn-action
+    {
+        width: 220px;
+    }
+            .date_range_box_foreign
+    {
+        width: 270px;
+    }
+   .index-prev,.index-prev-value,.index-open,.index-open-value, .index-Treq ,.index-Treq-value,.index-TVol,.index-TVol-value, .index-TVal, .index-TVal-value,.index-FFreq,.index-FFreq-value,.index-FVol,.index-FVol-value,.index-FVal-value,.index-FBuyVal,.index-FBuyVal-value,.index-FSellVal,.index-FSellVal-value,.index-FNettVal,.index-FNettVal-value,.index-FVal
+{
+    padding-left: 0px;
+}
+.watch_list_head .col-md-7
+{
+  width: 50%;
+  padding-top: 0px !important;
+}
+.watch_list_head .col-md-5
+{
+  width: 50%;
+}
+.add_stock_btn
+{
+  width: 100px !important;
+  height: 40px;
+  font-size: 14px;
+}
+.refresh_btn
+{
+  height: 30px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+.refresh_btn img
+{
+  width: 20px !important;
+}
+.stock_name
+{
+  width: 200px !important;
+  padding:5px !important;
+  height: 40px;
+  float: left;
+  margin-right: 15px;
+  border-radius: 15px !important;
+  -moz-border-radius: 15px !important;
+}
+.Watchlist-title
+{
+  font-size: 18pt;
+}.watch_list_head .col-md-7
+{
+  width: 60%;
+  padding-top: 0px !important;
+}
+.watch_list_head .col-md-5
+{
+  width: 40%;
+}
+.add_stock_btn
+{
+  width: 100px !important;
+  height: 40px;
+  font-size: 14px;
+}
+.refresh_btn
+{
+  height: 30px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+.refresh_btn img
+{
+  width: 20px !important;
+}
+.stock_name
+{
+  width: 200px !important;
+  padding:5px !important;
+  height: 40px;
+  float: left;
+  margin-right: 15px;
+  border-radius: 15px !important;
+  -moz-border-radius: 15px !important;
+}
+.Watchlist-title
+{
+  font-size: 18pt;
+}
+#keywords thead tr th
+{
+font-size: 10px !Important;
+}
+#keywords tbody tr td
+{
+  font-size: 10px !important;
+}
+.green,.orange,.blue,.blue-2,.red
+{
+  width: 60px !important;
+}
+#keywords thead tr th span
+{
+  padding-right: 13px !important;
+}
+#keywords thead tr th.headerSortUp span {
+    background-position-y: 1px;
+}
+#keywords thead tr th.headerSortDown span {
+    background-position-y: 1px;
+}
+}
+@media screen and (max-width: 1366px) {
+  .table_index .table-right-box tr td
+  {
+  	height: 31pt !important;
+  }
+  .table-detail-box tr td
+  {
+  	height: 36pt !important;
+  }
+
+  .summary-title
+  {
+    font-size: 12px;
+  }
+	.logo
+	{
+		margin-left: 100px;
+	}
+	#nav > ul {
+			margin: 0;
+			margin-left: 75px;
+		}
+
+    #nav > ul > li {
+        width: 190px;
+    }
+    #footer .footer-menu
+    {
+    	margin-left: 0px;
+    }
+    #footer .copyright
+    	{
+    		padding-right: 0px;
+    	}
+     .breadcrumb
+    {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+        #header
+    {
+        height: 150px;
+    }
+        .logo-footer
+    {
+        margin-top: -5px;
+        width: 90%;
+    }
+    .company-title
+    {
+        width: 233px;
+        padding-top: 5px;
+    }
+        .broker_filter .col-md-3
+    {
+        width: 550px !important;
+    }
+    .broker_filter .col-md-3 .filter-title
+    {
+        margin-left: 0px !important;
+        font-size: 15pt;
+    }
+    .broker_filter .col-md-3 .broker-name-list
+    {
+        font-size: 12pt;
+    }
+    .broker_filter .col-md-2 h3
+    {
+        font-size: 14pt !important;
+    }
+
+    .date-range-title-broker
+    {
+        width: 110px !important;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+        .broker_filter input
+    {
+        width: 240px !important;
+    }
+    .date_range_box
+    {
+        width: 250px !important;
+    }
+    .table_index table th
+    {
+        /* font-size: 12pt; */
+    }
+    .detail_table .col-md-6 .head_detail_table .col-md-6
+    {
+        padding-top: 0px !important;
+        padding-left: 15px;
+
+        width: 45%;
+    }
+    .table_index .table-head h3, h5
+    {
+        line-height: 15px;
+    }
+    .detail_table .col-md-12 .col-md-5 .value-summary
+    {
+        padding:5px;
+    }
+    .detail_table .col-md-12 .col-md-7 .col-md-12 .col-md-6
+    {
+        padding-right: 5px;
+    }
+    .detail_table .col-md-6 .head_detail_table .col-md-2
+    {
+        padding-left: 0px;
+        width: 20%;
+    }
+    .detail_table .col-md-6 .head_detail_table .head-bg-detail .input-company-small
+    {
+        width: 100px;
+    }
+    .detail_table .col-md-6 .head-bg-detail
+    {
+       background-position: -103px 0;
+       font-size: 15pt;
+       overflow: hidden;
+    }
+    .detail_table .col-md-6 .head_detail_table .head-bg-detail .input-company-small
+    {
+        font-size: 12px;
+        background: none;
+    }
+    .date_range_box_foreign
+{
+width: 240px;
+}
+}
+
+
+@media screen and (min-width: 1920px) {
+  .date_range_box
+  {
+    width: 370px;
+  }
+  .broker_filter input
+  {
+    width: 380px;
+  }
+    #nav > ul > li {
+        width: 275px;
+    }
+
+         .breadcrumb
+    {
+        margin-left: 60px;
+    }
+
+        .logo
+    {
+        margin-left: 120px;
+    }
+    #nav > ul {
+        margin-left: 100px;
+    }
+
+        .logo-footer
+    {
+        margin-top: -10px !important;
+    }
+
+    /*page 4 */
+        .company-title
+    {
+        width: 400px;
+        padding-top: 5px;
+    }
+    .date-range-title
+    {
+        width: 150px;
+    }
+    .company-title h5
+    {
+        font-size: 24px;
+    }
+    .date-range-title h3
+    {
+        font-size: 24px !important;
+    }
+        .order_filter
+    {
+        padding-left: 100px;
+    }
+    .order_filter select
+    {
+        margin-left: 30px;
+    }
+        .order_filter input
+    {
+        width: 350px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+                .date_range_box_foreign
+    {
+        width: 390px;
+    }
+        .stock-index h3
+    {
+        font-size: 36pt;
+    }
+    .stock-code b
+    {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom:  10px;
+    }
+    .watch_list_head .col-md-7
+    {
+      width: 70%;
+    }
+    .watch_list_head .col-md-5
+    {
+      width: 30%;
+    }
+    .add_stock_btn
+    {
+
+      height: 55px;
+    }
+    .refresh_btn
+    {
+      height: 45px;
+      padding-top: 18px;
+      padding-bottom: 10px;
+    }
+    .broker_filter .col-md-3
+    {
+      width: 600px;
+    }
+    .broker-name-list
+    {
+      width: 420px;
+    }
+.btn-action
+{
+  margin-left: 50px;
+}
+.table_index  table tr td
+{
+  height: 30px;
+}
+
+.table_index .table-right-box tr td
+{
+	height: 32pt !important;
+}
+.table-detail-box tr td
+{
+	height: 31pt !important;
+}
+
+	}
+
+	
+	
+@media screen and (max-width: 736px) {
+	#navPanel #14 {
+		display: none !important;
+	}
+	.table-responsive {
+		overflow-x: auto !important;
+	}
+	.order_filter {
+		padding: 5px;
+		margin-left: 0;
+	}
+	#charts .head-panel {
+		height: auto  !important;
+	}
+	#charts .head-panel > .stockname {
+		width: 100% !important;
+		padding-bottom: 10px;
+	}
+	#charts .head-panel > .stockname > label > input {
+		max-width: 150px !important;
+	}
+	#charts .head-panel > .stockname > a {
+		padding-right: 0 !important;
+		height: auto;
+		line-height: normal;
+	}
+	#charts .col-md-3 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	#charts ul.panel-menu > li {
+		margin: 5px 0px;
+	}
+	.stockinfo-wrap > div:last-child {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.stockinfo-wrap > div:first-child {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.rangeinfo {
+		margin: 20px 0;
+	}
+	.table_index {
+		overflow: hidden;
+	}
+	.table-board-wrap h4 {
+		width: auto !important;
+	}
+	/* .widget-chart { */
+		/* padding: 0; */
+	/* } */
+	.widget-chart.tbl {
+		padding: 0 !important;
+	}
+	#charts .head-panel > .stockname > label {
+		background-position-x: -83px;
+	}
+	#charts ul.panel-menu > li {
+		float: none !important;
+	}
+	ul.panel-menu li:nth-child(1) a {
+		padding-left: 60px !important;
+		margin-left: -48px;
+	}
+	
+	
+	.index-summary {
+		width: 80%;
+		margin: 0 auto;
+	}
+	.index-summary .index-box {
+		padding-top: 0;
+		padding: 0 auto;
+		border: solid 1px #B82029;
+	}
+	.index-prev {
+		padding-bottom: 15px;
+	}
+	.index-prev-value {
+		padding-bottom: 15px;
+	}
+	.index-Treq{
+		margin-top: 10px;
+		padding: 5px;
+	}
+	.index-Treq-value{
+		margin-top: 10px;
+		padding: 5px;
+	}
+	.index-TVol{
+		padding: 5px;
+	}
+	.index-TVol-value{
+		padding: 5px;
+	}
+	.index-TVal{
+		padding: 5px;
+	}
+	.index-TVal-value{
+		padding: 5px;
+	}
+	.index-FFreq{
+		margin-top: 10px;
+		padding: 5px;
+	}
+	.index-FFreq-value{
+		margin-top: 10px;
+		padding: 5px;
+	}
+	.index-FVol{
+		padding: 5px;
+	}
+	.index-FVol-value{
+		padding: 5px;
+	}
+	.index-FVal{
+		padding: 5px;
+	}
+	.index-FVal-value{
+		padding: 5px;
+	}
+	.index-FBuyVal{
+		margin-top: 10px;
+		padding: 5px;
+	}
+	.index-FBuyVal-value{
+		margin-top: 10px;
+		padding: 5px;
+	}
+	.index-FSellVal{
+		padding: 5px;
+	}
+	.index-FSellVal-value{
+		padding: 5px;
+	}
+	.index-FNettVal{
+		padding: 5px;
+	}
+	.index-FNettVal-value{
+		padding: 5px;
+	}
+	.detail_table .col-md-12 .col-md-5 .value-summary
+    {
+        padding-bottom: 40px;
+    }
+	.detail_table .col-md-12 .col-md-7 .col-md-12 .col-md-6 {
+		border-right: solid 1px rgba(206, 207, 209, 0.7);
+	}
+	.detail_table {
+		padding: 0;
+	}
+	.detail_table .col-md-12 .col-md-5 .value-summary {
+		border: none;
+	}
+	.detail_table .col-md-12 .col-md-5 .body-summary {
+		border-bottom: solid 1px rgba(206, 207, 209, 0.7);
+	}
+	.detail_table .col-md-12 .col-md-7 .col-md-12 {
+		border-bottom: none;
+	}
+	.garis-bottom-rq {
+		border-bottom: solid 1px rgba(206, 207, 209, 0.7);
+	}
+	.garis-top-rq {
+		border-top: solid 1px rgba(206, 207, 209, 0.7);
+	}
+	
+	
+	
+	.detail_table .col-md-6 {
+		padding: 0px;
+	}
+	
+	/* HIDDEN */
+	.hilang{
+		display:none;
+	}
+	#hilang{
+		display:none;
+	}
+	#tab-bg-ol {
+		background: #e6e7e8;
+	}
+	#no-padding {
+		padding: 0px;
+	}
+	
+	
+	div.dataTables_length {
+		padding-left: 40px !important;
+	}
+	div.dataTables_filter {
+		padding-left: 20px !important;
+	}
+	div.dataTables_info {
+		padding-left: 30px
+	}
+	
+	.order_filter select {
+		margin-left: 0px;
+	}
+	.table-head label {
+		margin-left: 0px;
+	}
+	
+	
+	.breadcrumb {
+		margin: 10px !important;
+		padding: 10px;
+	}
+	
+	.summary {
+		padding-top: 0px;
+		margin-top: 20px;
+	}
+	.summary-title {
+		margin-top: 20px;
+		margin-bottom: 0px;
+	}
+	.summary .col-md-3 {
+		border: none !important;
+	}
+	.summary .col-md-2 {
+		border: none !important;
+	}
+	
+	.table_area {
+		margin-top: 20px;
+	}
+	.table_area table th {
+		padding: 10px;
+	}
+	.table_area table tr td {
+		padding: 5px;
+	}
+	#keywords thead tr th {
+		padding: 8px !important;
+	}
+	.table_index table th {
+		padding: 10px;
+	}
+	.table_index table tr td {
+		padding: 5px;
+	}
+	
+	.no-padding-left {
+		padding: 0px;
+	}
+	.account_load {
+		padding: 15px 0px;
+	}
+	.btn-account-load {
+		padding: 5px !important;
+		margin: 10px 0px !important;
+	}
+	.account-menu {
+		margin-right: 10px;
+	}
+	.account-id {
+		margin: 1px;
+		padding: 10px;
+		font-size: 10pt;
+	}
+	.account-sales {
+		margin: 3px 0px;
+		padding: 1px 10px;
+		font-size: 10pt;
+	}
+	.acc-info {
+		padding: 0;
+	}
+	
+	.radio_wl {
+		height: auto;
+	}
+	.stock_radio_filter {
+		padding: 5px;
+	}
+	.form_wl {
+		padding: 5px;
+	}
+	
+	.nm-pt {
+		width: 100% !important;
+		padding: 10px !important;
+	}
+	.ditail {
+		width: 100% !important;
+		padding: 10px !important;
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+	.tab_visible {
+		overflow-x: auto;
+	}
+	#tab-bg-ol {
+		background: #e6e7e8;
+	}
+	/* HIDDEN */
+	.hilang{
+		display:none;
+	}
+	#hilang{
+		display:none;
+	}
+	
+	#charts .head-panel > .stockname {
+		width: 100%;
+		margin-bottom: 5px;
+	}
+	#charts .head-panel {
+		height: auto;
+	}
+	#charts .head-panel > .stockname > label {
+		padding-right: 0px;
+	}
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.summary .col-md-3 {
+		border: none !important;
+	}
+	.summary .col-md-2 {
+		border: none !important;
+	}
+	.account_load {
+		padding: 15px 0px;
+	}
+	.breadcrumb {
+		margin: 10px !important;
+		padding: 30px;
+	}
+	.account-id {
+		margin: 1px;
+		padding: 10px;
+		font-size: 10pt;
+	}
+	.account-sales {
+		margin: 3px 0px;
+		padding: 1px 10px;
+		font-size: 10pt;
+	}
+	.acc-info {
+		padding: 0;
+	}
+	.form_wl {
+		padding: 5px;
+	}
+	.radio_wl {
+		height: auto;
+	}
+	
+	.nm-pt {
+		width: 100% !important;
+		padding: 10px !important;
+	}
+	.ditail {
+		width: 100% !important;
+		padding: 10px !important;
+	}
+	
+	
+	
+	
+	.index-summary .index-box {
+		border: solid 1px #B82029;
+	}
+	
+	.detail_table .col-md-12 .col-md-7 .col-md-12 .col-md-6 {
+		border-right: solid 1px rgba(206, 207, 209, 0.7);
+	}
+	.detail_table {
+		padding: 0;
+	}
+	.detail_table .col-md-12 .col-md-5 .value-summary {
+		border: none;
+	}
+	
+	.detail_table .col-md-12 .col-md-7 .col-md-12 {
+		border-bottom: none;
+	}
+	.garis-bottom-rq {
+		border-bottom: solid 1px rgba(206, 207, 209, 0.7);
+	}
+	.garis-top-rq {
+		border-top: solid 1px rgba(206, 207, 209, 0.7);
+	}
+}
+
+ @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+	.breadcrumb {
+		margin: 55px !important;
+		padding: 10px;
+	}
+	.detail_table .col-md-6 .head_detail_table .head-bg-detail .input-company-small
+    {
+        width: 170px;
+    }
+	.detail_table .col-md-6 .head-bg-detail {
+		width: 90%;
+	}
+	.detail_table .col-md-6 .head-bg-detail {
+		background-position: -25px 0;
+	}
+ }

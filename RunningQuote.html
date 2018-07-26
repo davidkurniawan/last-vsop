@@ -1,0 +1,1407 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>Victoria Securities</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/page.css" />
+		<link rel="stylesheet" href="assets/css/theme.css" />
+		<link rel="stylesheet" href="assets/css/responsive.css" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script type="text/javascript" src="assets/js/datetimepicker/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/js/datetimepicker/moment.min.js"></script>
+		<script type="text/javascript" src="assets/js/datetimepicker/daterangepicker.js"></script>
+		<link rel="stylesheet" type="text/css" href="assets/js/datetimepicker/daterangepicker.css" />
+	</head>
+
+	<body>
+		<div id="page-wrapper">
+		<!-- Header -->
+			<div id="header">
+			
+				<!-- Logo -->
+				<img src="images/VS.png" class="logo" id="logo">
+				
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li class="current"><a href="#">ACCOUNT</a>
+							 <ul>
+								<li><a href="../html/account_info.jsp">Account Info</a></li>
+								<li><a href="../html/portfolio.jsp">Portfolio</a></li>
+								<li><a href="../html/order_list.jsp">Order List</a></li>
+								<li><a href="../html/trade_list.jsp">Transaction List</a></li>
+								<li><a href="../html/history_trade_list.jsp">Historical Transaction List</a></li>
+								<li><a href="../html/financial_history.jsp">Financial History</a></li>
+								<li><a href="../html/change_password.jsp">Change Password</a></li>
+							</ul>
+						</li>
+						<li><a href="#">QUOTE</a>
+							<ul>
+								<li><a href="../html/running_quote.jsp">Running Quote</a></li>
+								<li><a href="../html/ChartStockInfo.jsp">Stock Quote</a></li>
+								<li><a href="../html/historical_price.jsp">Historical Price</a></li>
+								<li><a href="../html/watchlist.jsp">Watch List</a></li>
+							</ul>		
+						</li>
+						<li><a id="tes" href="#">RANKING</a>
+							<ul>
+								<li><a href="../html/stock_tracking.jsp">Stock Tracking</a></li>
+								<li><a href="../html/broker_ranking.jsp">Broker Ranking</a></li>
+								<li><a href="../html/broker_activity.jsp">Broker Activity</a></li>
+								<li><a href="../html/foreign_activity.jsp">Foreign Activity</a></li>
+							 </ul>	
+						</li>
+						<li><a href="../html/ChartIndex.jsp">CHART</a></li>
+						<li><a href="#">NEWS</a>
+							<ul>
+								<li><a href="../html/research.jsp">Research</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="../logout.jsp">LOGOUT <i class="fa fa-sign-out"></i></a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+
+			<!-- Banner -->
+			<section class="content">
+				<div class="breadcrumb">
+					<span class="right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span><a href="#">Account</a>
+					<span class="right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span><a href="#">Running Quote</a>
+				</div>
+			</section>
+
+			<section class="account-nav">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 account_load">
+						<form action="#">
+							<label class="account-menu-label">Account</label>
+							<select name="_account" class="account-menu" id="_account"  onchange="objAccount.loadSales();">
+								<option value="#" selected>U06</option>
+							</select>
+							<button class="btn-account-load" id="_enter" name="_enter" onclick="objAccount.loadSales();">Load</button>
+						</form>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 acc-info">
+						<div class="account-info">
+							<div class="account-avatar">
+								<img src="images/user-icon.png" class="logout-icon">
+							</div>
+							<div class="account-name">
+								<h4 class="account-id"  id="_oAccountName" name="_oAccountName">U06-Umar widodo Tiono (R)</h4>
+								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 no-padding">
+									<h4 class="account-sales">Sales/Dealer : </h4>
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 no-padding">
+									<h4 class="account-sales" id="_oAccountSales" name="_oAccountSales">Bambang 021 7278 2310</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+	  
+			<div class="clearfix"></div>
+			
+			<section class="index-summary">
+				<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 item index-box first-box">
+					<div class="summary-title">
+						<div class=stock-code><b>IHSG</b></div>
+					</div>
+					<div class="summary-value">
+						<div class="stock-index">
+							<h3 id="_ihsg_ihsg">5,148.29</h3>
+						</div>
+						<div class="stock-index-percent">
+							<div class="col-xs-3 col-sm-3 col-md-4 col-lg-4 no-padding">
+								<h6 id="_ihsg_chg">-13.22</h6>
+							</div>
+							<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 no-padding">
+								<h6> |</h6>
+							</div>
+							<div class="col-xs-4 col-sm-4 col-md-5 col-lg-5 no-padding">
+								<h6 id="_ihsg_persenchg">-0.42 %</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 item index-box add-top-padding">
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 index-prev">
+						<p>Prev</p>
+					</div>
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 index-prev-value">
+						<p id="_ihsg_prev">5,146,00</p>
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 index-open">
+						<p>Open</p>
+					</div>
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 index-open-value">
+						<p id="_ihsg_open">5,160.00</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 item index-box add-top-padding">
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 index-prev">
+						<p>Hi</p>
+					</div>
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 index-prev-value">
+						<p id="_ihsg_high">5,204,38</p>
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 index-open">
+						<p>Lo</p>
+					</div>
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 index-open-value">
+						<p id="_ihsg_low">5,518.27</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 item index-box">
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 index-Treq">
+						<p>Treq</p>
+					</div>
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 index-Treq-value">
+						<p id="_ihsg_tfreq">66,434</p>
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 index-TVol">
+						<p>TVol</p>
+					</div>
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 index-TVol-value">
+						<p id="_ihsg_tvol">17,778,143</p>
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 index-TVal">
+						<p>TVal</p>
+					</div>
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 index-TVal-value">
+						<p id="_ihsg_tval">1.28 T</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 item index-box">
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 index-FFreq">
+						<p>FFreq</p>
+					</div>
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 index-FFreq-value">
+						<p id="_ihsg_ffreq">24,559</p>
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 index-FVol">
+						<p>FVol</p>
+					</div>
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 index-FVol-value">
+						<p  id="_ihsg_fvol">1,371,000</p>
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 index-FVal">
+						<p>FVal</p>
+					</div>
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 index-FVal-value">
+						<p id="_ihsg_fval">484.83 T</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 index-box last-box">
+					<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 index-FBuyVal">
+						<p>FBuyVal</p>
+					</div>
+					<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 index-FBuyVal-value">
+						<p id="_ihsg_bval">24,559</p>
+					</div>
+					<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 index-FSellVal">
+						<p>FSellVal</p>
+					</div>
+					<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 index-FSellVal-value">
+						<p id="_ihsg_sval">1,371,000</p>
+					</div>
+					<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 index-FNettVal">
+						<p>FNettVal</p>
+					</div>
+					<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 index-FNettVal-value">
+						<p id="_ihsg_nval">484.83b</p>
+					</div>
+				</div>
+			</section>
+			
+			<section class="table_index">
+				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 detail_table">
+					<div class="col-md-6">
+						<div class="col-md-12">
+							<div class="head_detail_table">
+								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 head-bg-detail">
+									<input type="text" class="input-company-small" value="" id="_stockCode1" onkeypress="return handleKeyPress(event,this,1);" onfocus="this.select()" style="text-transform: uppercase">
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nm-pt">
+									<h5  id="_stockName1">PT. Indo Tambangraya Megah Tbk</h5>
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 ditail">
+									<input type="button" class="btn-detail" value="Detail"  onclick="doDetail(1);">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="col-md-5">
+								<div class="col-md-12 value-summary">
+									<div class="col-md-12">
+										<h3 id="_last1">15,575</h3>
+										<hr class="no-padding">
+										<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+											<h5 id="_chg1">^875</h5>
+										</div>
+										<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+											<h5 id="_persenchg1">5.95 %</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12 body-summary">
+									<div class="col-md-12">
+										<div class="col-xs-8 col-md-8">
+											<b>Tval</b>
+										</div>
+										<div class="col-md-4 col-xs-4">
+											<b id="_val1">32.05</b>
+										</div>
+									</div>
+									<div class="col-md-12 left-bottom">
+										<div class="col-md-8 col-xs-8">
+											<b>Tvol (in lot)</b>
+										</div>
+										<div class="col-md-4 col-xs-4">
+											<b id="_vol1">20.892</b>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="col-md-8 col-xs-8">
+											<b>Tfreq</b>
+										</div>
+										<div class="col-md-4 col-xs-4">
+											<b id="_freq1">2,139</b>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-7">
+								<div class="col-md-12">
+									<div class="col-xs-6 col-md-6 garis-top-rq">
+										<b>Prev</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value garis-top-rq">
+										<b id="_close1">14.700</b>
+									</div>
+									<div class="col-xs-6 col-md-6 garis-bottom-rq">
+										<b>Average</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value garis-bottom-rq">
+										<b id="_avg1">15.344</b>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="col-xs-6 col-md-6">
+										<b>High</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_high1">14.700</b>
+									</div>
+									<div class="col-xs-6 col-md-6">
+										<b>Open</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_open1">15.344</b>
+									</div>
+									<div class="col-xs-6 col-md-6 garis-bottom-rq">
+										<b>Low</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value garis-bottom-rq">
+										<b id="_low1">14.744</b>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="col-xs-6 col-md-6">
+										<b>Hit Offer%</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_low1">14.700</b>
+									</div>
+									<div class="col-xs-6 col-md-6">
+										<b>Last done(in lot)</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_lastLot1">15.344</b>
+									</div>
+									<div class="col-xs-6 col-md-6">
+										<b>FnettVal</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_fnet1">14.744</b>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<table class="table-detail-box">
+								<tr>
+									<th style="color:#333333;">#Ord</th>
+									<th style="color:#333333;">Lot</th>
+									<th style="color:#333333;">Bid</th>
+									<th style="color:#333333;">Offer</th>
+									<th style="color:#333333;">Lot</th>
+									<th style="color:#333333;">#Ord</th>
+								</tr>
+								<tr>
+									<td id="_bidQueue10">&nbsp;</td>
+									<td id="_bidVol10">&nbsp;</td>
+									<td id="_bidVal10">&nbsp;</td>
+									<td id="_offerVal10">&nbsp;</td>
+									<td id="_offerVol10">&nbsp;</td>
+									<td id="_offerQueue10">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="_bidQueue11">&nbsp;</td>
+									<td id="_bidVol11">&nbsp;</td>
+									<td id="_bidVal11">&nbsp;</td>
+									<td id="_offerVal11">&nbsp;</td>
+									<td id="_offerVol11">&nbsp;</td>
+									<td id="_offerQueue11">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="_bidQueue12">&nbsp;</td>
+									<td id="_bidVol12">&nbsp;</td>
+									<td id="_bidVal12">&nbsp;</td>
+									<td id="_offerVal12">&nbsp;</td>
+									<td id="_offerVol12">&nbsp;</td>
+									<td id="_offerQueue12">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="_bidQueue13">&nbsp;</td>
+									<td id="_bidVol13">&nbsp;</td>
+									<td id="_bidVal13">&nbsp;</td>
+									<td id="_offerVal13">&nbsp;</td>
+									<td id="_offerVol13">&nbsp;</td>
+									<td id="_offerQueue13">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="_bidQueue14">&nbsp;</td>
+									<td id="_bidVol14">&nbsp;</td>
+									<td id="_bidVal14">&nbsp;</td>
+									<td id="_offerVal14">&nbsp;</td>
+									<td id="_offerVol14">&nbsp;</td>
+									<td id="_offerQueue14">&nbsp;</td>
+								</tr>
+								<tr class="last-field">
+									<td><b id="_bidTotalQueue1"></b></td>
+									<td><b id="_bidTotalVol1"></b></td>
+									<td><b></b></td>
+									<td><b></b></td>
+									<td><b id="_offerTotalVol1"></b></td>
+									<td><b id="_offerTotalQueue1"></b></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="col-md-12">
+							<div class="head_detail_table">
+								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 head-bg-detail">
+									<input type="text" class="input-company-small" value="" id="_stockCode2" onkeypress="return handleKeyPress(event,this,2);" onfocus="this.select()" style="text-transform: uppercase">
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nm-pt">
+									<h5  id="_stockName2">PT. Indo Tambangraya Megah Tbk</h5>
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 ditail">
+									<input type="button" class="btn-detail" value="Detail"  onclick="doDetail(2);">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="col-md-5">
+								<div class="col-md-12 value-summary">
+									<div class="col-md-12">
+										<h3 id="_last2">15,575</h3>
+										<hr class="no-padding">
+										<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+											<h5 id="_chg2">^875</h5>
+										</div>
+										<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+											<h5 id="_persenchg2">5.95 %</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12 body-summary">
+									<div class="col-md-12">
+										<div class="col-xs-8 col-md-8">
+											<b>Tval</b>
+										</div>
+										<div class="col-md-4 col-xs-4">
+											<b id="_val2">32.05</b>
+										</div>
+									</div>
+									<div class="col-md-12 left-bottom">
+										<div class="col-md-8 col-xs-8">
+											<b>Tvol (in lot)</b>
+										</div>
+										<div class="col-md-4 col-xs-4">
+											<b id="_vol2">20.892</b>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="col-md-8 col-xs-8">
+											<b>Tfreq</b>
+										</div>
+										<div class="col-md-4 col-xs-4">
+											<b id="_freq2">2,139</b>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-7">
+								<div class="col-md-12">
+									<div class="col-xs-6 col-md-6 garis-top-rq">
+										<b>Prev</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value garis-top-rq">
+										<b id="_close2">14.700</b>
+									</div>
+									<div class="col-xs-6 col-md-6 garis-bottom-rq">
+										<b>Average</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value garis-bottom-rq">
+										<b id="_avg2">15.344</b>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="col-xs-6 col-md-6">
+										<b>High</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_high2">14.700</b>
+									</div>
+									<div class="col-xs-6 col-md-6">
+										<b>Open</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_open2">15.344</b>
+									</div>
+									<div class="col-xs-6 col-md-6 garis-bottom-rq">
+										<b>Low</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value garis-bottom-rq">
+										<b id="_low2">14.744</b>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="col-xs-6 col-md-6">
+										<b>Hit Offer%</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_low2">14.700</b>
+									</div>
+									<div class="col-xs-6 col-md-6">
+										<b>Last done(in lot)</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_lastLot2">15.344</b>
+									</div>
+									<div class="col-xs-6 col-md-6">
+										<b>FnettVal</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_fnet2">14.744</b>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<table class="table-detail-box">
+								<tr>
+									<th style="color:#333333;">#Ord</th>
+									<th style="color:#333333;">Lot</th>
+									<th style="color:#333333;">Bid</th>
+									<th style="color:#333333;">Offer</th>
+									<th style="color:#333333;">Lot</th>
+									<th style="color:#333333;">#Ord</th>
+								</tr>
+								<tr>
+									<td id="_bidQueue20">&nbsp;</td>
+									<td id="_bidVol20">&nbsp;</td>
+									<td id="_bidVal20">&nbsp;</td>
+									<td id="_offerVal20">&nbsp;</td>
+									<td id="_offerVol20">&nbsp;</td>
+									<td id="_offerQueue20">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="_bidQueue21">&nbsp;</td>
+									<td id="_bidVol21">&nbsp;</td>
+									<td id="_bidVal21">&nbsp;</td>
+									<td id="_offerVal21">&nbsp;</td>
+									<td id="_offerVol21">&nbsp;</td>
+									<td id="_offerQueue21">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="_bidQueue22">&nbsp;</td>
+									<td id="_bidVol22">&nbsp;</td>
+									<td id="_bidVal22">&nbsp;</td>
+									<td id="_offerVal22">&nbsp;</td>
+									<td id="_offerVol22">&nbsp;</td>
+									<td id="_offerQueue22">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="_bidQueue23">&nbsp;</td>
+									<td id="_bidVol23">&nbsp;</td>
+									<td id="_bidVal23">&nbsp;</td>
+									<td id="_offerVal23">&nbsp;</td>
+									<td id="_offerVol23">&nbsp;</td>
+									<td id="_offerQueue23">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="_bidQueue24">&nbsp;</td>
+									<td id="_bidVol24">&nbsp;</td>
+									<td id="_bidVal24">&nbsp;</td>
+									<td id="_offerVal24">&nbsp;</td>
+									<td id="_offerVol24">&nbsp;</td>
+									<td id="_offerQueue24">&nbsp;</td>
+								</tr>
+								<tr class="last-field">
+									<td><b id="_bidTotalQueue2"></b></td>
+									<td><b id="_bidTotalVol2"></b></td>
+									<td><b></b></td>
+									<td><b></b></td>
+									<td><b id="_offerTotalVol2"></b></td>
+									<td><b id="_offerTotalQueue2"></b></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="col-md-6 hilang">
+						<div class="col-md-12">
+							<div class="head_detail_table">
+								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 head-bg-detail">
+									<input type="text" class="input-company-small" value="" id="_stockCode3" onkeypress="return handleKeyPress(event,this,3);" onfocus="this.select()" style="text-transform: uppercase">
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nm-pt">
+									<h5  id="_stockName3">PT. Indo Tambangraya Megah Tbk</h5>
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 ditail">
+									<input type="button" class="btn-detail" value="Detail"  onclick="doDetail(3);">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="col-md-5">
+								<div class="col-md-12 value-summary">
+									<div class="col-md-12">
+										<h3 id="_last3">15,575</h3>
+										<hr class="no-padding">
+										<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+											<h5 id="_chg3">^875</h5>
+										</div>
+										<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+											<h5 id="_persenchg3">5.95 %</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12 body-summary">
+									<div class="col-md-12">
+										<div class="col-xs-8 col-md-8">
+											<b>Tval</b>
+										</div>
+										<div class="col-md-4 col-xs-4">
+											<b id="_val3">32.05</b>
+										</div>
+									</div>
+									<div class="col-md-12 left-bottom">
+										<div class="col-md-8 col-xs-8">
+											<b>Tvol (in lot)</b>
+										</div>
+										<div class="col-md-4 col-xs-4">
+											<b id="_vol3">20.892</b>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="col-md-8 col-xs-8">
+											<b>Tfreq</b>
+										</div>
+										<div class="col-md-4 col-xs-4">
+											<b id="_freq3">2,139</b>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-7">
+								<div class="col-md-12">
+									<div class="col-xs-6 col-md-6 garis-top-rq">
+										<b>Prev</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value garis-top-rq">
+										<b id="_close3">14.700</b>
+									</div>
+									<div class="col-xs-6 col-md-6 garis-bottom-rq">
+										<b>Average</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value garis-bottom-rq">
+										<b id="_avg3">15.344</b>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="col-xs-6 col-md-6">
+										<b>High</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_high3">14.700</b>
+									</div>
+									<div class="col-xs-6 col-md-6">
+										<b>Open</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_open3">15.344</b>
+									</div>
+									<div class="col-xs-6 col-md-6 garis-bottom-rq">
+										<b>Low</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value garis-bottom-rq">
+										<b id="_low3">14.744</b>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="col-xs-6 col-md-6">
+										<b>Hit Offer%</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_low3">14.700</b>
+									</div>
+									<div class="col-xs-6 col-md-6">
+										<b>Last done(in lot)</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_lastLot3">15.344</b>
+									</div>
+									<div class="col-xs-6 col-md-6">
+										<b>FnettVal</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_fnet3">14.744</b>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<table class="table-detail-box">
+								<tr>
+									<th style="color:#333333;">#Ord</th>
+									<th style="color:#333333;">Lot</th>
+									<th style="color:#333333;">Bid</th>
+									<th style="color:#333333;">Offer</th>
+									<th style="color:#333333;">Lot</th>
+									<th style="color:#333333;">#Ord</th>
+								</tr>
+								<tr>
+									<td id="_bidQueue30">&nbsp;</td>
+									<td id="_bidVol30">&nbsp;</td>
+									<td id="_bidVal30">&nbsp;</td>
+									<td id="_offerVal30">&nbsp;</td>
+									<td id="_offerVol30">&nbsp;</td>
+									<td id="_offerQueue30">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="_bidQueue31">&nbsp;</td>
+									<td id="_bidVol31">&nbsp;</td>
+									<td id="_bidVal31">&nbsp;</td>
+									<td id="_offerVal31">&nbsp;</td>
+									<td id="_offerVol31">&nbsp;</td>
+									<td id="_offerQueue31">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="_bidQueue32">&nbsp;</td>
+									<td id="_bidVol32">&nbsp;</td>
+									<td id="_bidVal32">&nbsp;</td>
+									<td id="_offerVal32">&nbsp;</td>
+									<td id="_offerVol32">&nbsp;</td>
+									<td id="_offerQueue32">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="_bidQueue33">&nbsp;</td>
+									<td id="_bidVol33">&nbsp;</td>
+									<td id="_bidVal33">&nbsp;</td>
+									<td id="_offerVal33">&nbsp;</td>
+									<td id="_offerVol33">&nbsp;</td>
+									<td id="_offerQueue33">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="_bidQueue34">&nbsp;</td>
+									<td id="_bidVol34">&nbsp;</td>
+									<td id="_bidVal34">&nbsp;</td>
+									<td id="_offerVal34">&nbsp;</td>
+									<td id="_offerVol34">&nbsp;</td>
+									<td id="_offerQueue34">&nbsp;</td>
+								</tr>
+								<tr class="last-field">
+									<td><b id="_bidTotalQueue3"></b></td>
+									<td><b id="_bidTotalVol3"></b></td>
+									<td><b></b></td>
+									<td><b></b></td>
+									<td><b id="_offerTotalVol3"></b></td>
+									<td><b id="_offerTotalQueue3"></b></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="col-md-6 hilang">
+						<div class="col-md-12">
+							<div class="head_detail_table">
+								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 head-bg-detail">
+									<input type="text" class="input-company-small" value="" id="_stockCode3" onkeypress="return handleKeyPress(event,this,3);" onfocus="this.select()" style="text-transform: uppercase">
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nm-pt">
+									<h5  id="_stockName3">PT. Indo Tambangraya Megah Tbk</h5>
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 ditail">
+									<input type="button" class="btn-detail" value="Detail"  onclick="doDetail(3);">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="col-md-5">
+								<div class="col-md-12 value-summary">
+									<div class="col-md-12">
+										<h3 id="_last4">15,575</h3>
+										<hr class="no-padding">
+										<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+											<h5 id="_chg4">^875</h5>
+										</div>
+										<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+											<h5 id="_persenchg4">5.95 %</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12 body-summary">
+									<div class="col-md-12">
+										<div class="col-xs-8 col-md-8">
+											<b>Tval</b>
+										</div>
+										<div class="col-md-4 col-xs-4">
+											<b id="_val4">32.05</b>
+										</div>
+									</div>
+									<div class="col-md-12 left-bottom">
+										<div class="col-md-8 col-xs-8">
+											<b>Tvol (in lot)</b>
+										</div>
+										<div class="col-md-4 col-xs-4">
+											<b id="_vol4">20.892</b>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="col-md-8 col-xs-8">
+											<b>Tfreq</b>
+										</div>
+										<div class="col-md-4 col-xs-4">
+											<b id="_freq4">2,139</b>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-7">
+								<div class="col-md-12">
+									<div class="col-xs-6 col-md-6 garis-top-rq">
+										<b>Prev</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value garis-top-rq">
+										<b id="_close4">14.700</b>
+									</div>
+									<div class="col-xs-6 col-md-6 garis-bottom-rq">
+										<b>Average</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value garis-bottom-rq">
+										<b id="_avg4">15.344</b>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="col-xs-6 col-md-6">
+										<b>High</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_high4">14.700</b>
+									</div>
+									<div class="col-xs-6 col-md-6">
+										<b>Open</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_open4">15.344</b>
+									</div>
+									<div class="col-xs-6 col-md-6 garis-bottom-rq">
+										<b>Low</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value garis-bottom-rq">
+										<b id="_low4">14.744</b>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="col-xs-6 col-md-6">
+										<b>Hit Offer%</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_low4">14.700</b>
+									</div>
+									<div class="col-xs-6 col-md-6">
+										<b>Last done(in lot)</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_lastLot4">15.344</b>
+									</div>
+									<div class="col-xs-6 col-md-6">
+										<b>FnettVal</b>
+									</div>
+									<div class="col-xs-6 col-md-6 right-value">
+										<b id="_fnet4">14.744</b>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<table class="table-detail-box">
+								<tr>
+									<th style="color:#333333;">#Ord</th>
+									<th style="color:#333333;">Lot</th>
+									<th style="color:#333333;">Bid</th>
+									<th style="color:#333333;">Offer</th>
+									<th style="color:#333333;">Lot</th>
+									<th style="color:#333333;">#Ord</th>
+								</tr>
+								<tr>
+									<td id="_bidQueue40">&nbsp;</td>
+									<td id="_bidVol40">&nbsp;</td>
+									<td id="_bidVal40">&nbsp;</td>
+									<td id="_offerVal40">&nbsp;</td>
+									<td id="_offerVol40">&nbsp;</td>
+									<td id="_offerQueue40">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="_bidQueue41">&nbsp;</td>
+									<td id="_bidVol41">&nbsp;</td>
+									<td id="_bidVal41">&nbsp;</td>
+									<td id="_offerVal41">&nbsp;</td>
+									<td id="_offerVol41">&nbsp;</td>
+									<td id="_offerQueue41">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="_bidQueue42">&nbsp;</td>
+									<td id="_bidVol42">&nbsp;</td>
+									<td id="_bidVal42">&nbsp;</td>
+									<td id="_offerVal42">&nbsp;</td>
+									<td id="_offerVol42">&nbsp;</td>
+									<td id="_offerQueue42">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="_bidQueue43">&nbsp;</td>
+									<td id="_bidVol43">&nbsp;</td>
+									<td id="_bidVal43">&nbsp;</td>
+									<td id="_offerVal43">&nbsp;</td>
+									<td id="_offerVol43">&nbsp;</td>
+									<td id="_offerQueue43">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="_bidQueue44">&nbsp;</td>
+									<td id="_bidVol44">&nbsp;</td>
+									<td id="_bidVal44">&nbsp;</td>
+									<td id="_offerVal44">&nbsp;</td>
+									<td id="_offerVol44">&nbsp;</td>
+									<td id="_offerQueue44">&nbsp;</td>
+								</tr>
+								<tr class="last-field">
+									<td><b id="_bidTotalQueue4"></b></td>
+									<td><b id="_bidTotalVol4"></b></td>
+									<td><b></b></td>
+									<td><b></b></td>
+									<td><b id="_offerTotalVol4"></b></td>
+									<td><b id="_offerTotalQueue4"></b></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div id="no-padding" class="table-responsive col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
+					<table class="table-right-box">
+						<tr>
+							<th>Time</th>
+							<th>Code</th>
+							<th>Price</th>
+							<th>Lot</th>
+							<th>Chg</th>
+							<th>%</th>
+							<th colspan="2">Buyer</th>
+							<th colspan="2">Seller</th>
+						</tr>
+						<tr id="_row0">
+							<td id="_time_row0">&nbsp;</td>
+							<td id="_stock_row0">&nbsp;</td>
+							<td id="_price_row0">&nbsp;</td>
+							<td id="_qty_row0">&nbsp;</td>
+							<td id="_chg_row0">&nbsp;</td>
+							<td id="_persenchg_row0">&nbsp;</td>
+							<td id="_buyerType_row0">&nbsp;</td>
+							<td id="_buyerCode_row0">&nbsp;</td>
+							<td id="_sellerCode_row0">&nbsp;</td>
+							<td id="_sellerType_row0">&nbsp;</td>
+						</tr>
+						<tr id="_row1">
+							<td id="_time_row1">&nbsp;</td>
+							<td id="_stock_row1">&nbsp;</td>
+							<td id="_price_row1">&nbsp;</td>
+							<td id="_qty_row1">&nbsp;</td>
+							<td id="_chg_row1">&nbsp;</td>
+							<td id="_persenchg_row1">&nbsp;</td>
+							<td id="_buyerType_row1">&nbsp;</td>
+							<td id="_buyerCode_row1">&nbsp;</td>
+							<td id="_sellerCode_row1">&nbsp;</td>
+							<td id="_sellerType_row1">&nbsp;</td>
+						</tr>
+						<tr id="_row2">
+							<td id="_time_row2">&nbsp;</td>
+							<td id="_stock_row2">&nbsp;</td>
+							<td id="_price_row2">&nbsp;</td>
+							<td id="_qty_row2">&nbsp;</td>
+							<td id="_chg_row2">&nbsp;</td>
+							<td id="_persenchg_row2">&nbsp;</td>
+							<td id="_buyerType_row2">&nbsp;</td>
+							<td id="_buyerCode_row2">&nbsp;</td>
+							<td id="_sellerCode_row2">&nbsp;</td>
+							<td id="_sellerType_row2">&nbsp;</td>
+						</tr>
+						<tr id="_row3">
+							<td id="_time_row3">&nbsp;</td>
+							<td id="_stock_row3">&nbsp;</td>
+							<td id="_price_row3">&nbsp;</td>
+							<td id="_qty_row3">&nbsp;</td>
+							<td id="_chg_row3">&nbsp;</td>
+							<td id="_persenchg_row3">&nbsp;</td>
+							<td id="_buyerType_row3">&nbsp;</td>
+							<td id="_buyerCode_row3">&nbsp;</td>
+							<td id="_sellerCode_row3">&nbsp;</td>
+							<td id="_sellerType_row3">&nbsp;</td>
+						</tr>
+						<tr id="_row4">
+							<td id="_time_row4">&nbsp;</td>
+							<td id="_stock_row4">&nbsp;</td>
+							<td id="_price_row4">&nbsp;</td>
+							<td id="_qty_row4">&nbsp;</td>
+							<td id="_chg_row4">&nbsp;</td>
+							<td id="_persenchg_row4">&nbsp;</td>
+							<td id="_buyerType_row4">&nbsp;</td>
+							<td id="_buyerCode_row4">&nbsp;</td>
+							<td id="_sellerCode_row4">&nbsp;</td>
+							<td id="_sellerType_row4">&nbsp;</td>
+						</tr>
+						<tr id="_row5">
+							<td id="_time_row5">&nbsp;</td>
+							<td id="_stock_row5">&nbsp;</td>
+							<td id="_price_row5">&nbsp;</td>
+							<td id="_qty_row5">&nbsp;</td>
+							<td id="_chg_row5">&nbsp;</td>
+							<td id="_persenchg_row5">&nbsp;</td>
+							<td id="_buyerType_row5">&nbsp;</td>
+							<td id="_buyerCode_row5">&nbsp;</td>
+							<td id="_sellerCode_row5">&nbsp;</td>
+							<td id="_sellerType_row5">&nbsp;</td>
+						</tr>
+						<tr id="_row6">
+							<td id="_time_row6">&nbsp;</td>
+							<td id="_stock_row6">&nbsp;</td>
+							<td id="_price_row6">&nbsp;</td>
+							<td id="_qty_row6">&nbsp;</td>
+							<td id="_chg_row6">&nbsp;</td>
+							<td id="_persenchg_row6">&nbsp;</td>
+							<td id="_buyerType_row6">&nbsp;</td>
+							<td id="_buyerCode_row6">&nbsp;</td>
+							<td id="_sellerCode_row6">&nbsp;</td>
+							<td id="_sellerType_row6">&nbsp;</td>
+						</tr>
+						<tr id="_row7">
+							<td id="_time_row7">&nbsp;</td>
+							<td id="_stock_row7">&nbsp;</td>
+							<td id="_price_row7">&nbsp;</td>
+							<td id="_qty_row7">&nbsp;</td>
+							<td id="_chg_row7">&nbsp;</td>
+							<td id="_persenchg_row7">&nbsp;</td>
+							<td id="_buyerType_row7">&nbsp;</td>
+							<td id="_buyerCode_row7">&nbsp;</td>
+							<td id="_sellerCode_row7">&nbsp;</td>
+							<td id="_sellerType_row7">&nbsp;</td>
+						</tr>
+						<tr id="_row8">
+							<td id="_time_row8">&nbsp;</td>
+							<td id="_stock_row8">&nbsp;</td>
+							<td id="_price_row8">&nbsp;</td>
+							<td id="_qty_row8">&nbsp;</td>
+							<td id="_chg_row8">&nbsp;</td>
+							<td id="_persenchg_row8">&nbsp;</td>
+							<td id="_buyerType_row8">&nbsp;</td>
+							<td id="_buyerCode_row8">&nbsp;</td>
+							<td id="_sellerCode_row8">&nbsp;</td>
+							<td id="_sellerType_row8">&nbsp;</td>
+						</tr>
+						<tr  id="_row9">
+							<td id="_time_row9">&nbsp;</td>
+							<td id="_stock_row9">&nbsp;</td>
+							<td id="_price_row9">&nbsp;</td>
+							<td id="_qty_row9">&nbsp;</td>
+							<td id="_chg_row9">&nbsp;</td>
+							<td id="_persenchg_row9">&nbsp;</td>
+							<td id="_buyerType_row9">&nbsp;</td>
+							<td id="_buyerCode_row9">&nbsp;</td>
+							<td id="_sellerCode_row9">&nbsp;</td>
+							<td id="_sellerType_row9">&nbsp;</td>
+						</tr>
+						<tr id="_row10">
+							<td id="_time_row10">&nbsp;</td>
+							<td id="_stock_row10">&nbsp;</td>
+							<td id="_price_row10">&nbsp;</td>
+							<td id="_qty_row10">&nbsp;</td>
+							<td id="_chg_row10">&nbsp;</td>
+							<td id="_persenchg_row10">&nbsp;</td>
+							<td id="_buyerType_row10">&nbsp;</td>
+							<td id="_buyerCode_row10">&nbsp;</td>
+							<td id="_sellerCode_row10">&nbsp;</td>
+							<td id="_sellerType_row10">&nbsp;</td>
+						</tr>
+						<tr id="_row11">
+							<td id="_time_row11">&nbsp;</td>
+							<td id="_stock_row11">&nbsp;</td>
+							<td id="_price_row11">&nbsp;</td>
+							<td id="_qty_row11">&nbsp;</td>
+							<td id="_chg_row11">&nbsp;</td>
+							<td id="_persenchg_row11">&nbsp;</td>
+							<td id="_buyerType_row11">&nbsp;</td>
+							<td id="_buyerCode_row11">&nbsp;</td>
+							<td id="_sellerCode_row11">&nbsp;</td>
+							<td id="_sellerType_row11">&nbsp;</td>
+						</tr>
+						<tr id="_row12">
+							<td id="_time_row12">&nbsp;</td>
+							<td id="_stock_row12">&nbsp;</td>
+							<td id="_price_row12">&nbsp;</td>
+							<td id="_qty_row12">&nbsp;</td>
+							<td id="_chg_row12">&nbsp;</td>
+							<td id="_persenchg_row12">&nbsp;</td>
+							<td id="_buyerType_row12">&nbsp;</td>
+							<td id="_buyerCode_row12">&nbsp;</td>
+							<td id="_sellerCode_row12">&nbsp;</td>
+							<td id="_sellerType_row12">&nbsp;</td>
+						</tr>
+						<tr id="_row13">
+							<td id="_time_row13">&nbsp;</td>
+							<td id="_stock_row13">&nbsp;</td>
+							<td id="_price_row13">&nbsp;</td>
+							<td id="_qty_row13">&nbsp;</td>
+							<td id="_chg_row13">&nbsp;</td>
+							<td id="_persenchg_row13">&nbsp;</td>
+							<td id="_buyerType_row13">&nbsp;</td>
+							<td id="_buyerCode_row13">&nbsp;</td>
+							<td id="_sellerCode_row13">&nbsp;</td>
+							<td id="_sellerType_row13">&nbsp;</td>
+						</tr>
+						<tr id="_row14">
+							<td id="_time_row14">&nbsp;</td>
+							<td id="_stock_row14">&nbsp;</td>
+							<td id="_price_row14">&nbsp;</td>
+							<td id="_qty_row14">&nbsp;</td>
+							<td id="_chg_row14">&nbsp;</td>
+							<td id="_persenchg_row14">&nbsp;</td>
+							<td id="_buyerType_row14">&nbsp;</td>
+							<td id="_buyerCode_row14">&nbsp;</td>
+							<td id="_sellerCode_row14">&nbsp;</td>
+							<td id="_sellerType_row14">&nbsp;</td>
+						</tr>
+						<tr id="_row15">
+							<td id="_time_row15">&nbsp;</td>
+							<td id="_stock_row15">&nbsp;</td>
+							<td id="_price_row15">&nbsp;</td>
+							<td id="_qty_row15">&nbsp;</td>
+							<td id="_chg_row15">&nbsp;</td>
+							<td id="_persenchg_row15">&nbsp;</td>
+							<td id="_buyerType_row15">&nbsp;</td>
+							<td id="_buyerCode_row15">&nbsp;</td>
+							<td id="_sellerCode_row15">&nbsp;</td>
+							<td id="_sellerType_row15">&nbsp;</td>
+						</tr>
+						<tr id="_row16">
+							<td id="_time_row16">&nbsp;</td>
+							<td id="_stock_row16">&nbsp;</td>
+							<td id="_price_row16">&nbsp;</td>
+							<td id="_qty_row16">&nbsp;</td>
+							<td id="_chg_row16">&nbsp;</td>
+							<td id="_persenchg_row16">&nbsp;</td>
+							<td id="_buyerType_row16">&nbsp;</td>
+							<td id="_buyerCode_row16">&nbsp;</td>
+							<td id="_sellerCode_row16">&nbsp;</td>
+							<td id="_sellerType_row16">&nbsp;</td>
+						</tr>
+						<tr id="_row17">
+							<td id="_time_row17">&nbsp;</td>
+							<td id="_stock_row17">&nbsp;</td>
+							<td id="_price_row17">&nbsp;</td>
+							<td id="_qty_row17">&nbsp;</td>
+							<td id="_chg_row17">&nbsp;</td>
+							<td id="_persenchg_row17">&nbsp;</td>
+							<td id="_buyerType_row17">&nbsp;</td>
+							<td id="_buyerCode_row17">&nbsp;</td>
+							<td id="_sellerCode_row17">&nbsp;</td>
+							<td id="_sellerType_row17">&nbsp;</td>
+						</tr>
+						<tr id="_row18">
+							<td id="_time_row18">&nbsp;</td>
+							<td id="_stock_row18">&nbsp;</td>
+							<td id="_price_row18">&nbsp;</td>
+							<td id="_qty_row18">&nbsp;</td>
+							<td id="_chg_row18">&nbsp;</td>
+							<td id="_persenchg_row18">&nbsp;</td>
+							<td id="_buyerType_row18">&nbsp;</td>
+							<td id="_buyerCode_row18">&nbsp;</td>
+							<td id="_sellerCode_row18">&nbsp;</td>
+							<td id="_sellerType_row18">&nbsp;</td>
+						</tr>
+						<tr id="_row19">
+							<td id="_time_row19">&nbsp;</td>
+							<td id="_stock_row19">&nbsp;</td>
+							<td id="_price_row19">&nbsp;</td>
+							<td id="_qty_row19">&nbsp;</td>
+							<td id="_chg_row19">&nbsp;</td>
+							<td id="_persenchg_row19">&nbsp;</td>
+							<td id="_buyerType_row19">&nbsp;</td>
+							<td id="_buyerCode_row19">&nbsp;</td>
+							<td id="_sellerCode_row19">&nbsp;</td>
+							<td id="_sellerType_row19">&nbsp;</td>
+						</tr>
+						<tr id="_row20">
+							<td id="_time_row20">&nbsp;</td>
+							<td id="_stock_row20">&nbsp;</td>
+							<td id="_price_row20">&nbsp;</td>
+							<td id="_qty_row20">&nbsp;</td>
+							<td id="_chg_row20">&nbsp;</td>
+							<td id="_persenchg_row20">&nbsp;</td>
+							<td id="_buyerType_row20">&nbsp;</td>
+							<td id="_buyerCode_row20">&nbsp;</td>
+							<td id="_sellerCode_row20">&nbsp;</td>
+							<td id="_sellerType_row20">&nbsp;</td>
+						</tr>
+						<tr id="_row21">
+							<td id="_time_row21">&nbsp;</td>
+							<td id="_stock_row21">&nbsp;</td>
+							<td id="_price_row21">&nbsp;</td>
+							<td id="_qty_row21">&nbsp;</td>
+							<td id="_chg_row21">&nbsp;</td>
+							<td id="_persenchg_row21">&nbsp;</td>
+							<td id="_buyerType_row21">&nbsp;</td>
+							<td id="_buyerCode_row21">&nbsp;</td>
+							<td id="_sellerCode_row21">&nbsp;</td>
+							<td id="_sellerType_row21">&nbsp;</td>
+						</tr>
+						<tr id="_row22">
+							<td id="_time_row22">&nbsp;</td>
+							<td id="_stock_row22">&nbsp;</td>
+							<td id="_price_row22">&nbsp;</td>
+							<td id="_qty_row22">&nbsp;</td>
+							<td id="_chg_row22">&nbsp;</td>
+							<td id="_persenchg_row22">&nbsp;</td>
+							<td id="_buyerType_row22">&nbsp;</td>
+							<td id="_buyerCode_row22">&nbsp;</td>
+							<td id="_sellerCode_row22">&nbsp;</td>
+							<td id="_sellerType_row22">&nbsp;</td>
+						</tr>
+						<tr id="_row23">
+							<td id="_time_row23">&nbsp;</td>
+							<td id="_stock_row23">&nbsp;</td>
+							<td id="_price_row23">&nbsp;</td>
+							<td id="_qty_row23">&nbsp;</td>
+							<td id="_chg_row23">&nbsp;</td>
+							<td id="_persenchg_row23">&nbsp;</td>
+							<td id="_buyerType_row23">&nbsp;</td>
+							<td id="_buyerCode_row23">&nbsp;</td>
+							<td id="_sellerCode_row23">&nbsp;</td>
+							<td id="_sellerType_row23">&nbsp;</td>
+						</tr>
+						<tr id="_row24">
+							<td id="_time_row24">&nbsp;</td>
+							<td id="_stock_row24">&nbsp;</td>
+							<td id="_price_row24">&nbsp;</td>
+							<td id="_qty_row24">&nbsp;</td>
+							<td id="_chg_row24">&nbsp;</td>
+							<td id="_persenchg_row24">&nbsp;</td>
+							<td id="_buyerType_row24">&nbsp;</td>
+							<td id="_buyerCode_row24">&nbsp;</td>
+							<td id="_sellerCode_row24">&nbsp;</td>
+							<td id="_sellerType_row24">&nbsp;</td>
+						</tr>
+						<tr  id="_row25">
+							<td id="_time_row25">&nbsp;</td>
+							<td id="_stock_row25">&nbsp;</td>
+							<td id="_price_row25">&nbsp;</td>
+							<td id="_qty_row25">&nbsp;</td>
+							<td id="_chg_row25">&nbsp;</td>
+							<td id="_persenchg_row25">&nbsp;</td>
+							<td id="_buyerType_row25">&nbsp;</td>
+							<td id="_buyerCode_row25">&nbsp;</td>
+							<td id="_sellerCode_row25">&nbsp;</td>
+							<td id="_sellerType_row25">&nbsp;</td>
+						</tr>
+						<tr id="_row26">
+							<td id="_time_row26">&nbsp;</td>
+							<td id="_stock_row26">&nbsp;</td>
+							<td id="_price_row26">&nbsp;</td>
+							<td id="_qty_row26">&nbsp;</td>
+							<td id="_chg_row26">&nbsp;</td>
+							<td id="_persenchg_row26">&nbsp;</td>
+							<td id="_buyerType_row26">&nbsp;</td>
+							<td id="_buyerCode_row26">&nbsp;</td>
+							<td id="_sellerCode_row26">&nbsp;</td>
+							<td id="_sellerType_row26">&nbsp;</td>
+						</tr>
+						<tr id="_row27">
+							<td id="_time_row27">&nbsp;</td>
+							<td id="_stock_row27">&nbsp;</td>
+							<td id="_price_row27">&nbsp;</td>
+							<td id="_qty_row27">&nbsp;</td>
+							<td id="_chg_row27">&nbsp;</td>
+							<td id="_persenchg_row27">&nbsp;</td>
+							<td id="_buyerType_row27">&nbsp;</td>
+							<td id="_buyerCode_row27">&nbsp;</td>
+							<td id="_sellerCode_row27">&nbsp;</td>
+							<td id="_sellerType_row27">&nbsp;</td>
+						</tr>
+						<tr id="_row28">
+							<td id="_time_row28">&nbsp;</td>
+							<td id="_stock_row28">&nbsp;</td>
+							<td id="_price_row28">&nbsp;</td>
+							<td id="_qty_row28">&nbsp;</td>
+							<td id="_chg_row28">&nbsp;</td>
+							<td id="_persenchg_row28">&nbsp;</td>
+							<td id="_buyerType_row28">&nbsp;</td>
+							<td id="_buyerCode_row28">&nbsp;</td>
+							<td id="_sellerCode_row28">&nbsp;</td>
+							<td id="_sellerType_row28">&nbsp;</td>
+						</tr>
+						<tr  id="_row29">
+							<td id="_time_row29">&nbsp;</td>
+							<td id="_stock_row29">&nbsp;</td>
+							<td id="_price_row29">&nbsp;</td>
+							<td id="_qty_row29">&nbsp;</td>
+							<td id="_chg_row29">&nbsp;</td>
+							<td id="_persenchg_row29">&nbsp;</td>
+							<td id="_buyerType_row29">&nbsp;</td>
+							<td id="_buyerCode_row29">&nbsp;</td>
+							<td id="_sellerCode_row29">&nbsp;</td>
+							<td id="_sellerType_row29">&nbsp;</td>
+						</tr>
+						<tr id="_row30" class="last-field">
+							<td id="_time_row30">&nbsp;</td>
+							<td id="_stock_row30">&nbsp;</td>
+							<td id="_price_row30">&nbsp;</td>
+							<td id="_qty_row30">&nbsp;</td>
+							<td id="_chg_row30">&nbsp;</td>
+							<td id="_persenchg_row30">&nbsp;</td>
+							<td id="_buyerType_row30">&nbsp;</td>
+							<td id="_buyerCode_row30">&nbsp;</td>
+							<td id="_sellerCode_row30">&nbsp;</td>
+							<td id="_sellerType_row30">&nbsp;</td>
+						</tr>
+						<!-- <tr id="_row31" class="last-field"> -->
+							<!-- <td id="_time_row31">&nbsp;</td> -->
+							<!-- <td id="_stock_row31">&nbsp;</td> -->
+							<!-- <td id="_price_row31">&nbsp;</td> -->
+							<!-- <td id="_qty_row31">&nbsp;</td> -->
+							<!-- <td id="_chg_row31">&nbsp;</td> -->
+							<!-- <td id="_persenchg_row31">&nbsp;</td> -->
+							<!-- <td id="_buyerType_row31">&nbsp;</td> -->
+							<!-- <td id="_buyerCode_row31">&nbsp;</td> -->
+							<!-- <td id="_sellerCode_row31">&nbsp;</td> -->
+							<!-- <td id="_sellerType_row31">&nbsp;</td> -->
+						<!-- </tr> -->
+					</table>
+				</div>
+			</section>
+
+			<section id="cta" class="footer-banner">
+				<div class="container">
+					<div class="col-md-4 col-md-offset-2 title-footerbanner">
+						<span>PT. Victoria Securities Indonesia<br>
+								Terdaftar dan Diawasi oleh</span>
+					</div>
+					<div class="col-md-4 logo-ojk">
+						<img src="images/ojk.png" width="150px">
+					</div>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<div id="footer">
+				<div class="col-md-4">
+					<img src="images/logo-white.png" class="logo-footer">
+				</div>
+				<div class="col-md-4 footer-menu">
+					<ul>
+						<li><a href="http://www.victoriasecurities.co.id" target="_blank">ABOUT US</a></li>
+						<li><a href="http://www.victoriainvestama.co.id" target="_blank">GROUP</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 copyright">
+					&copy; copyright Victoria Securities | All Rights Reserved
+				</div>
+
+				<!-- Icons -->
+
+
+				<!-- Copyright -->
+
+
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/hidden.js"></script>
+		<script>
+		<!-- var myElement = document.querySelector("#14"); -->
+<!-- myElement.style.backgroundColor = "#D93600"; -->
+		<!-- var theDropDown = document.querySelector("#14"); -->
+<!-- theDropDown.classList.add("disableMenu"); -->
+		<!-- document.getElementById("14").style.color = "blue"; -->
+			$("14").css({"display": "none"});
+		</script>
+		<script>
+			jQuery(document).ready(function() {
+				function randomgen() {
+					var rannumber = '';
+					for (ranNum = 1; ranNum <= 6; ranNum++) {
+						rannumber += Math.floor(Math.random() * 10).toString();
+					}
+					$('#verifyNum').html(rannumber);
+					$('#verifyNumHidden').val(rannumber);
+				}
+				randomgen();
+				//Verification number generate code Ends here
+
+				//Validation Starts Here
+				$('#MyForm').submit(function() {
+					if ($('#enterVerify').val() == $('#verifyNumHidden').val()) {
+						$('form').attr('action', 'https://example.com/MyForm');
+						return true;
+					} else {
+						alert("Please Enter Correct Verification Number");
+						randomgen();
+						$('#enterVerify').select();
+						$('#enterVerify').focus();
+						return false;
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

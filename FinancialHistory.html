@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>Victoria Securities</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/page.css" />
+		<link rel="stylesheet" href="assets/css/theme.css" />
+		<link rel="stylesheet" href="assets/css/responsive.css" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script type="text/javascript" src="assets/js/datetimepicker/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/datetimepicker/moment.min.js"></script>
+		<script type="text/javascript" src="assets/js/datetimepicker/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/js/datetimepicker/daterangepicker.css" />
+<link rel="stylesheet" href="assets/css/datatabel.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap.min.css" />
+	</head>
+
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<div id="header">
+
+				<!-- Logo -->
+				<img src="images/VS.png" class="logo" id="logo">
+
+				<div class="logout-area">
+				LOGOUT
+				<a href="#"><img src="images/logoutbtn.png" class="logout-icon"></a>
+				</div>
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li class="current"><a href="#">ACCOUNT</a>
+              <ul>
+                <li><a href="AccountInfo.html">Account Info</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="OrderList.html">Order List</a></li>
+                <li><a href="TransactionList.html">Transaction List</a></li>
+                <li><a href="HistoricalTransactionList.html">Historical Transaction List</a></li>
+                <li><a href="FinancialHistory.html">Financial History</a></li>
+                <li><a href="PasswordAndPin.html">Change Password</a></li>
+
+              </ul>
+            </li>
+						<li><a href="#">QUOTE</a>
+						<ul>
+                <li><a href="RunningQuote.html">Running Quote</a></li>
+                <li><a href="#">Stock Quote</a></li>
+                <li><a href="HistoricalPrice.html">Historical Price</a></li>
+                <li><a href="WatchList.html">Watch List</a></li>
+
+              </ul>
+              </li>
+						<li class="hilang"><a href="#" id="hilang" class="hilang">RANKING</a>
+						<ul>
+                <li><a href="StockTracking.html">Stock Tracking</a></li>
+                <li><a href="BrokerRangking.html">Broker Rangking</a></li>
+                <li><a href="BrokerActivity.html">Broker Activity</a></li>
+                <li><a href="ForeignActivity.html">Foreign Activity</a></li>
+
+              </ul>
+              </li>
+						<li><a href="#">CHART</a></li>
+						<li><a href="#">NEWS</a>
+							<ul>
+									<li><a href="Research.html">Research</a></li>
+							</ul>
+						</li>
+            <li><a href="Tournament.html">TOURNAMENT</a></li>
+					</ul>
+				</nav>
+
+			</div>
+
+			<!-- Banner -->
+			<section class="content">
+      <div class="breadcrumb">
+        <span class="right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span><a href="#">Account</a><span class="right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span><a href="#">Financial History</a>
+      </div>
+
+			</section>
+
+      <section class="account-nav">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 account_load">
+					<form action="#">
+						<label class="account-menu-label">Account</label>
+						<select name="_account" class="account-menu" id="_account"  onchange="objAccount.loadSales();">
+							<option value="#" selected>U06</option>
+						</select>
+						<button class="btn-account-load" id="_enter" name="_enter" onclick="objAccount.loadSales();">Load</button>
+					</form>
+				</div>
+
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 acc-info">
+					<div class="account-info">
+						<div class="account-avatar">
+							<img src="images/user-icon.png" class="logout-icon">
+						</div>
+						<div class="account-name">
+							<h4 class="account-id"  id="_oAccountName" name="_oAccountName">U06-Umar widodo Tiono (R)</h4>
+							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 no-padding">
+								<h4 class="account-sales">Sales/Dealer : </h4>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 no-padding">
+								<h4 class="account-sales" id="_oAccountSales" name="_oAccountSales">Bambang 021 7278 2310</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+      <div class="clearfix"></div>
+      
+<section id="tab-bg-ol" class="table_index">
+	<div class="col-md-12 table-head">
+		<div class="order_filter">
+			<label for="filter">Time Period</label>
+			<input type="text" name="datefilter" id="datefilter" value="" class="date_range">
+				<script type="text/javascript">
+				$(function() {
+
+				  $('input[name="datefilter"]').daterangepicker({
+					  autoUpdateInput: false,
+					  showDropdowns: true,
+					  linkedCalendars: false,
+					  dateLimit: {
+					  days: 365
+					},
+					  locale: {
+						  cancelLabel: 'Clear',
+						   format: "MMMM DD, YYYY",
+						   separator: " - "
+					  }
+				  });
+
+				  $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+					  $(this).val(picker.startDate.format('MMMM DD, YYYY') + ' - ' + picker.endDate.format('MMMM DD, YYYY'));
+				  });
+
+				  $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+					  $(this).val('');
+				  });
+
+				});
+				</script>
+			<button class="btn-account-load">Load</button>
+		</div>
+	</div>
+	<div class="table-responsive tab_visible">
+		<table style="width:100%" id="_dataTable">
+			<thead>
+			<tr>
+				<th>Date</th>
+				<th>Trx ID</th>
+				<th>Description</th>
+				<th>Nett Amount</th>
+				<th>Comm (%)</th>
+				<th>Due Date</th>
+				<th>Status</th>
+			</tr>
+			</thead>
+			<tbody id="_tsorter">
+				<tr>
+					<td>123134</td>
+					<td>xaaaaaaaaaaaaaaaccccccccccccccc</td>
+					<td>asasas</td>
+					<td>asasasasa</td>
+					<td>sasasasas</td>
+					<td>asasasa</td>
+					<td></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+<script>
+    $(document).ready(function(){
+    $('#_dataTable').DataTable();
+});
+</script>
+			</section>
+
+
+			<section id="cta" class="footer-banner">
+				<div class="container">
+					<div class="col-md-4 col-md-offset-2 title-footerbanner">
+						<span>PT. Victoria Securities Indonesia<br>
+								Terdaftar dan Diawasi oleh</span>
+					</div>
+					<div class="col-md-4 logo-ojk">
+						<img src="images/ojk.png" width="150px">
+					</div>
+					</header>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<div id="footer">
+				<div class="col-md-4">
+					<img src="images/logo-white.png" class="logo-footer">
+				</div>
+				<div class="col-md-4 footer-menu">
+					<ul>
+						<li><a href="#">ABOUTS US</a></li>
+						<li><a href="#">GROUP</a></li>
+						<li><a href="#">CONTACT</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 copyright">
+					&copy; copyright Victoria Securities | All Rights Reserved
+				</div>
+
+				<!-- Icons -->
+
+
+				<!-- Copyright -->
+
+
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+		<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+		<script>
+			jQuery(document).ready(function() {
+				function randomgen() {
+					var rannumber = '';
+					for (ranNum = 1; ranNum <= 6; ranNum++) {
+						rannumber += Math.floor(Math.random() * 10).toString();
+					}
+					$('#verifyNum').html(rannumber);
+					$('#verifyNumHidden').val(rannumber);
+				}
+				randomgen();
+				//Verification number generate code Ends here
+
+				//Validation Starts Here
+				$('#MyForm').submit(function() {
+					if ($('#enterVerify').val() == $('#verifyNumHidden').val()) {
+						$('form').attr('action', 'https://example.com/MyForm');
+						return true;
+					} else {
+						alert("Please Enter Correct Verification Number");
+						randomgen();
+						$('#enterVerify').select();
+						$('#enterVerify').focus();
+						return false;
+					}
+				});
+			});
+		</script>
+
+
+	</body>
+
+</html>
